@@ -6,7 +6,7 @@
 *.gch
 *.pch
 
-**CMakeFiles
-**log
-**protobuf-2.6.1
-**apache-log4cxx-0.10.0
+**/CMakeFiles/
+**/log/
+**/protobuf-2.6.1/
+**/apache-log4cxx-0.10.0/
