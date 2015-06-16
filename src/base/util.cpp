@@ -3,6 +3,7 @@
 using namespace std;
 
 CSLog g_imlog = CSLog(LOG_MODULE_IM);
+CSLog g_imdebug = CSLog("stdout");
 
 CRefObject::CRefObject()
 {

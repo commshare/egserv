@@ -1,15 +1,18 @@
 cmake_minimum_required(VERSION 2.6)
 PROJECT(db_proxy_server)
+SET(_ ${PROJECT_SOURCE_DIR})
+AUX_SOURCE_DIRECTORY(${_} SRC_LIST)
+AUX_SOURCE_DIRECTORY(${_}/business SRC_LIST)
+FOREACH(F ${SRC_LIST})
+MESSAGE(STATUS ${F})
+ENDFOREACH(F)
 
-AUX_SOURCE_DIRECTORY(./ SRC_LIST)
-AUX_SOURCE_DIRECTORY(./business SRC_LIST)
-
-#SET(LIBRARY_OUTPUT_PATH ./)
-SET(EXECUTABLE_OUTPUT_PATH  ./)
+#SET(LIBRARY_OUTPUT_PATH ${_})
+SET(EXECUTABLE_OUTPUT_PATH  ${_})
 if(APPLE)
-    SET(PB_LIB_DIR ../base/pb/lib/mac)
+    SET(PB_LIB_DIR ${_}/../base/pb/lib/mac)
 elseif(UNIX)
-    SET(PB_LIB_DIR ../base/pb/lib/linux)
+    SET(PB_LIB_DIR ${_}/../base/pb/lib/linux)
 endif()
 
 SET(MYSQL_INCLUDE_DIR /usr/include/mysql)
@@ -19,9 +22,9 @@ ADD_DEFINITIONS( -O0 -gstabs+ -W -Wall -D_REENTRANT -D_FILE_OFFSET_BITS=64 -DAC_
 -DAC_HAS_WARNING -DAC_HAS_ERROR -DAC_HAS_CRITICAL -DTIXML_USE_STL
 -DAC_HAS_DEBUG -DLINUX_DAEMON -std=c++11 -DENCRYPT)
 
-INCLUDE_DIRECTORIES(./ ./businiess ../base ../base/jsoncpp ../base/pb/protocol
-../base/pb/ ${MYSQL_INCLUDE_DIR})
-LINK_DIRECTORIES(./ ../base ${PB_LIB_DIR} ${MYSQL_LIB} ../base/slog/lib)
+INCLUDE_DIRECTORIES(${_} ${_}/businiess ${_}/../base ${_}/../base/jsoncpp ${_}/../base/pb/protocol
+${_}/../base/pb/ ${MYSQL_INCLUDE_DIR})
+LINK_DIRECTORIES(${_} ${_}/../base ${PB_LIB_DIR} ${MYSQL_LIB} ${_}/../base/slog/lib)
 
 #ADD_XXXX必须在TARGET_LINK_LIBRARIES前面，否则会报错
 #ADD_LIBRARY(${PROJECTNAME} SHARED/STATIC ${SRC_LIST})

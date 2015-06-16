@@ -2,7 +2,8 @@
 *.obj
 *.slo
 *.lo
-
+*.swp
+*.rdb
 *.gch
 *.pch
 
@@ -10,3 +11,4 @@
 **/log/
 **/protobuf-2.6.1/
 **/apache-log4cxx-0.10.0/
+**/trash/

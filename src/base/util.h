@@ -48,8 +48,8 @@ private:
 
 #define LOG_MODULE_IM         "IM"
 
-
 extern CSLog g_imlog;
+extern CSLog g_imdebug;
 
 // Add By ZhangYuanhao 2015-01-14 For log show the file name not the full path + filename
 #define __FILENAME__ (strrchr(__FILE__, '/') ? (strrchr(__FILE__, '/') + 1):__FILE__)
@@ -57,7 +57,7 @@ extern CSLog g_imlog;
 #define log(fmt, ...)  g_imlog.Info("<%s>\t<%d>\t<%s>,"fmt, __FILENAME__, __LINE__, __FUNCTION__, ##__VA_ARGS__)
 #else
 #define log(fmt, args...)  g_imlog.Info("<%s>|<%d>|<%s>," fmt, __FILENAME__, __LINE__, __FUNCTION__, ##args)
-#define debug(fmt, args...) g_imlog.Debug("<%s>|<%d>|<%s>," fmt, __FILENAME__, __LINE__, __FUNCTION__, ##args)
+#define debug(fmt, args...) g_imdebug.Debug("<%s>|<%d>|<%s>," fmt, __FILENAME__, __LINE__, __FUNCTION__, ##args)
 #endif
 //#define log(fmt, ...)  g_imlog.Info("<%s>\t<%d>\t<%s>,"+fmt, __FILENAME__, __LINE__, __FUNCTION__, ##__VA_ARGS__)
 

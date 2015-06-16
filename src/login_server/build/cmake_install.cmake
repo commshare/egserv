@@ -1,4 +1,4 @@
-# Install script for directory: /home/nary/dandanhua/TeamTalk/server/src/login_server
+# Install script for directory: /home/nary/egserv/src/login_server
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/nary/dandanhua/TeamTalk/server/src/login_server/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/nary/egserv/src/login_server/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/nary/dandanhua/TeamTalk/server/src/login_server/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/nary/egserv/src/login_server/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)
