@@ -1,0 +1,12 @@
+*.o
+*.obj
+*.slo
+*.lo
+
+*.gch
+*.pch
+
+**CMakeFiles
+**log
+**protobuf-2.6.1
+**apache-log4cxx-0.10.0
