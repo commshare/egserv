@@ -1,0 +1,369 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	193;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	196;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	199;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	202;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	206;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	181;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	184;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	187;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	190;"	d	file:
+ARCHITECTURE_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	194;"	d	file:
+CHttpConn	HttpConn.cpp	/^CHttpConn::CHttpConn()$/;"	f	class:CHttpConn	signature:()
+CHttpConn	HttpConn.h	/^	CHttpConn();$/;"	p	class:CHttpConn	access:public	signature:()
+CHttpConn	HttpConn.h	/^class CHttpConn : public CRefObject$/;"	c	inherits:CRefObject
+CHttpConn::CHttpConn	HttpConn.cpp	/^CHttpConn::CHttpConn()$/;"	f	class:CHttpConn	signature:()
+CHttpConn::CHttpConn	HttpConn.h	/^	CHttpConn();$/;"	p	class:CHttpConn	access:public	signature:()
+CHttpConn::Close	HttpConn.cpp	/^void CHttpConn::Close()$/;"	f	class:CHttpConn	signature:()
+CHttpConn::Close	HttpConn.h	/^    void Close();$/;"	p	class:CHttpConn	access:public	signature:()
+CHttpConn::GetConnHandle	HttpConn.h	/^	uint32_t GetConnHandle() { return m_conn_handle; }$/;"	f	class:CHttpConn	access:public	signature:()
+CHttpConn::GetPeerIP	HttpConn.h	/^	char* GetPeerIP() { return (char*)m_peer_ip.c_str(); }$/;"	f	class:CHttpConn	access:public	signature:()
+CHttpConn::OnClose	HttpConn.cpp	/^void CHttpConn::OnClose()$/;"	f	class:CHttpConn	signature:()
+CHttpConn::OnClose	HttpConn.h	/^    void OnClose();$/;"	p	class:CHttpConn	access:public	signature:()
+CHttpConn::OnConnect	HttpConn.cpp	/^void CHttpConn::OnConnect(net_handle_t handle)$/;"	f	class:CHttpConn	signature:(net_handle_t handle)
+CHttpConn::OnConnect	HttpConn.h	/^    void OnConnect(net_handle_t handle);$/;"	p	class:CHttpConn	access:public	signature:(net_handle_t handle)
+CHttpConn::OnRead	HttpConn.cpp	/^void CHttpConn::OnRead()$/;"	f	class:CHttpConn	signature:()
+CHttpConn::OnRead	HttpConn.h	/^    void OnRead();$/;"	p	class:CHttpConn	access:public	signature:()
+CHttpConn::OnTimer	HttpConn.cpp	/^void CHttpConn::OnTimer(uint64_t curr_tick)$/;"	f	class:CHttpConn	signature:(uint64_t curr_tick)
+CHttpConn::OnTimer	HttpConn.h	/^    void OnTimer(uint64_t curr_tick);$/;"	p	class:CHttpConn	access:public	signature:(uint64_t curr_tick)
+CHttpConn::OnWrite	HttpConn.cpp	/^void CHttpConn::OnWrite()$/;"	f	class:CHttpConn	signature:()
+CHttpConn::OnWrite	HttpConn.h	/^    void OnWrite();$/;"	p	class:CHttpConn	access:public	signature:()
+CHttpConn::OnWriteComlete	HttpConn.cpp	/^void CHttpConn::OnWriteComlete()$/;"	f	class:CHttpConn	signature:()
+CHttpConn::OnWriteComlete	HttpConn.h	/^    void OnWriteComlete();$/;"	p	class:CHttpConn	access:public	signature:()
+CHttpConn::Send	HttpConn.cpp	/^int CHttpConn::Send(void* data, int len)$/;"	f	class:CHttpConn	signature:(void* data, int len)
+CHttpConn::Send	HttpConn.h	/^	int Send(void* data, int len);$/;"	p	class:CHttpConn	access:public	signature:(void* data, int len)
+CHttpConn::_HandleMsgServRequest	HttpConn.cpp	/^void CHttpConn::_HandleMsgServRequest(string& url, string& post_data)$/;"	f	class:CHttpConn	signature:(string& url, string& post_data)
+CHttpConn::_HandleMsgServRequest	HttpConn.h	/^    void _HandleMsgServRequest(string& url, string& post_data);$/;"	p	class:CHttpConn	access:private	signature:(string& url, string& post_data)
+CHttpConn::m_busy	HttpConn.h	/^	bool			m_busy;$/;"	m	class:CHttpConn	access:protected
+CHttpConn::m_cHttpParser	HttpConn.h	/^    CHttpParserWrapper m_cHttpParser;$/;"	m	class:CHttpConn	access:protected
+CHttpConn::m_conn_handle	HttpConn.h	/^	uint32_t		m_conn_handle;$/;"	m	class:CHttpConn	access:protected
+CHttpConn::m_in_buf	HttpConn.h	/^	CSimpleBuffer	m_in_buf;$/;"	m	class:CHttpConn	access:protected
+CHttpConn::m_last_recv_tick	HttpConn.h	/^	uint64_t		m_last_recv_tick;$/;"	m	class:CHttpConn	access:protected
+CHttpConn::m_last_send_tick	HttpConn.h	/^	uint64_t		m_last_send_tick;$/;"	m	class:CHttpConn	access:protected
+CHttpConn::m_out_buf	HttpConn.h	/^	CSimpleBuffer	m_out_buf;$/;"	m	class:CHttpConn	access:protected
+CHttpConn::m_peer_ip	HttpConn.h	/^	std::string		m_peer_ip;$/;"	m	class:CHttpConn	access:protected
+CHttpConn::m_peer_port	HttpConn.h	/^	uint16_t		m_peer_port;$/;"	m	class:CHttpConn	access:protected
+CHttpConn::m_sock_handle	HttpConn.h	/^	net_handle_t	m_sock_handle;$/;"	m	class:CHttpConn	access:protected
+CHttpConn::m_state	HttpConn.h	/^    uint32_t        m_state;$/;"	m	class:CHttpConn	access:protected
+CHttpConn::~CHttpConn	HttpConn.cpp	/^CHttpConn::~CHttpConn()$/;"	f	class:CHttpConn	signature:()
+CHttpConn::~CHttpConn	HttpConn.h	/^	virtual ~CHttpConn();$/;"	p	class:CHttpConn	access:public	signature:()
+CLoginConn	LoginConn.cpp	/^CLoginConn::CLoginConn()$/;"	f	class:CLoginConn	signature:()
+CLoginConn	LoginConn.h	/^	CLoginConn();$/;"	p	class:CLoginConn	access:public	signature:()
+CLoginConn	LoginConn.h	/^class CLoginConn : public CImConn$/;"	c	inherits:CImConn
+CLoginConn::CLoginConn	LoginConn.cpp	/^CLoginConn::CLoginConn()$/;"	f	class:CLoginConn	signature:()
+CLoginConn::CLoginConn	LoginConn.h	/^	CLoginConn();$/;"	p	class:CLoginConn	access:public	signature:()
+CLoginConn::Close	LoginConn.cpp	/^void CLoginConn::Close()$/;"	f	class:CLoginConn	signature:()
+CLoginConn::Close	LoginConn.h	/^	virtual void Close();$/;"	p	class:CLoginConn	access:public	signature:()
+CLoginConn::HandlePdu	LoginConn.cpp	/^void CLoginConn::HandlePdu(CImPdu* pPdu)$/;"	f	class:CLoginConn	signature:(CImPdu* pPdu)
+CLoginConn::HandlePdu	LoginConn.h	/^	virtual void HandlePdu(CImPdu* pPdu);$/;"	p	class:CLoginConn	access:public	signature:(CImPdu* pPdu)
+CLoginConn::OnClose	LoginConn.cpp	/^void CLoginConn::OnClose()$/;"	f	class:CLoginConn	signature:()
+CLoginConn::OnClose	LoginConn.h	/^	virtual void OnClose();$/;"	p	class:CLoginConn	access:public	signature:()
+CLoginConn::OnConnect2	LoginConn.cpp	/^void CLoginConn::OnConnect2(net_handle_t handle, int conn_type)$/;"	f	class:CLoginConn	signature:(net_handle_t handle, int conn_type)
+CLoginConn::OnConnect2	LoginConn.h	/^	void OnConnect2(net_handle_t handle, int conn_type);$/;"	p	class:CLoginConn	access:public	signature:(net_handle_t handle, int conn_type)
+CLoginConn::OnTimer	LoginConn.cpp	/^void CLoginConn::OnTimer(uint64_t curr_tick)$/;"	f	class:CLoginConn	signature:(uint64_t curr_tick)
+CLoginConn::OnTimer	LoginConn.h	/^	virtual void OnTimer(uint64_t curr_tick);$/;"	p	class:CLoginConn	access:public	signature:(uint64_t curr_tick)
+CLoginConn::_HandleMsgServInfo	LoginConn.cpp	/^void CLoginConn::_HandleMsgServInfo(CImPdu* pPdu)$/;"	f	class:CLoginConn	signature:(CImPdu* pPdu)
+CLoginConn::_HandleMsgServInfo	LoginConn.h	/^	void _HandleMsgServInfo(CImPdu* pPdu);$/;"	p	class:CLoginConn	access:private	signature:(CImPdu* pPdu)
+CLoginConn::_HandleMsgServRequest	LoginConn.cpp	/^void CLoginConn::_HandleMsgServRequest(CImPdu* pPdu)$/;"	f	class:CLoginConn	signature:(CImPdu* pPdu)
+CLoginConn::_HandleMsgServRequest	LoginConn.h	/^	void _HandleMsgServRequest(CImPdu* pPdu);$/;"	p	class:CLoginConn	access:private	signature:(CImPdu* pPdu)
+CLoginConn::_HandleUserCntUpdate	LoginConn.cpp	/^void CLoginConn::_HandleUserCntUpdate(CImPdu* pPdu)$/;"	f	class:CLoginConn	signature:(CImPdu* pPdu)
+CLoginConn::_HandleUserCntUpdate	LoginConn.h	/^	void _HandleUserCntUpdate(CImPdu* pPdu);$/;"	p	class:CLoginConn	access:private	signature:(CImPdu* pPdu)
+CLoginConn::m_conn_type	LoginConn.h	/^	int	m_conn_type;$/;"	m	class:CLoginConn	access:private
+CLoginConn::~CLoginConn	LoginConn.cpp	/^CLoginConn::~CLoginConn()$/;"	f	class:CLoginConn	signature:()
+CLoginConn::~CLoginConn	LoginConn.h	/^	virtual ~CLoginConn();$/;"	p	class:CLoginConn	access:public	signature:()
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	13;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	16;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	19;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	22;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	25;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	28;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	32;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	34;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	36;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	40;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	43;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	46;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	49;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	52;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	55;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	58;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	61;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	66;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	77;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	80;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	86;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	89;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	92;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	12;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	15;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	18;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	21;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	24;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	27;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	30;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	34;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	36;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	38;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	42;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	45;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	48;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	51;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	54;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	57;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	60;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	65;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	68;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	74;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	77;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	80;"	d	file:
+COMPILER_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	9;"	d	file:
+CONN_STATE_CLOSED	HttpConn.h	/^    CONN_STATE_CLOSED,$/;"	e	enum:__anon1
+CONN_STATE_CONNECTED	HttpConn.h	/^    CONN_STATE_CONNECTED,$/;"	e	enum:__anon1
+CONN_STATE_IDLE	HttpConn.h	/^    CONN_STATE_IDLE,$/;"	e	enum:__anon1
+CONN_STATE_OPEN	HttpConn.h	/^    CONN_STATE_OPEN,$/;"	e	enum:__anon1
+ClientPort	loginserver.conf	/^ClientPort=8008$/;"	v
+Close	HttpConn.cpp	/^void CHttpConn::Close()$/;"	f	class:CHttpConn	signature:()
+Close	HttpConn.h	/^    void Close();$/;"	p	class:CHttpConn	access:public	signature:()
+Close	LoginConn.cpp	/^void CLoginConn::Close()$/;"	f	class:CLoginConn	signature:()
+Close	LoginConn.h	/^	virtual void Close();$/;"	p	class:CLoginConn	access:public	signature:()
+FindHttpConnByHandle	HttpConn.cpp	/^CHttpConn* FindHttpConnByHandle(uint32_t conn_handle)$/;"	f	signature:(uint32_t conn_handle)
+FindHttpConnByHandle	HttpConn.h	/^CHttpConn* FindHttpConnByHandle(uint32_t handle);$/;"	p	signature:(uint32_t handle)
+GetConnHandle	HttpConn.h	/^	uint32_t GetConnHandle() { return m_conn_handle; }$/;"	f	class:CHttpConn	access:public	signature:()
+GetPeerIP	HttpConn.h	/^	char* GetPeerIP() { return (char*)m_peer_ip.c_str(); }$/;"	f	class:CHttpConn	access:public	signature:()
+HTTP_CONN_TIMEOUT	HttpConn.h	15;"	d
+HTTP_RESPONSE_HTML	HttpConn.h	18;"	d
+HTTP_RESPONSE_HTML_MAX	HttpConn.h	22;"	d
+HandlePdu	LoginConn.cpp	/^void CLoginConn::HandlePdu(CImPdu* pPdu)$/;"	f	class:CLoginConn	signature:(CImPdu* pPdu)
+HandlePdu	LoginConn.h	/^	virtual void HandlePdu(CImPdu* pPdu);$/;"	p	class:CLoginConn	access:public	signature:(CImPdu* pPdu)
+HttpConnMap_t	HttpConn.h	/^typedef hash_map<uint32_t, CHttpConn*> HttpConnMap_t;$/;"	t
+ID_VOID_MAIN	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
+IpParser	ipparser.cpp	/^IpParser::IpParser()$/;"	f	class:IpParser	signature:()
+IpParser	ipparser.h	/^        IpParser();$/;"	p	class:IpParser	access:public	signature:()
+IpParser	ipparser.h	/^class IpParser$/;"	c
+IpParser::IpParser	ipparser.cpp	/^IpParser::IpParser()$/;"	f	class:IpParser	signature:()
+IpParser::IpParser	ipparser.h	/^        IpParser();$/;"	p	class:IpParser	access:public	signature:()
+IpParser::isTelcome	ipparser.cpp	/^bool IpParser::isTelcome(const char *pIp)$/;"	f	class:IpParser	signature:(const char *pIp)
+IpParser::isTelcome	ipparser.h	/^    bool isTelcome(const char* ip);$/;"	p	class:IpParser	access:public	signature:(const char* ip)
+IpParser::~IpParser	ipparser.cpp	/^IpParser::~IpParser()$/;"	f	class:IpParser	signature:()
+IpParser::~IpParser	ipparser.h	/^        virtual ~IpParser();$/;"	p	class:IpParser	access:public	signature:()
+LOGINCONN_H_	LoginConn.h	9;"	d
+LOGIN_CONN_TYPE_CLIENT	LoginConn.h	/^	LOGIN_CONN_TYPE_CLIENT = 1,$/;"	e	enum:__anon2
+LOGIN_CONN_TYPE_MSG_SERV	LoginConn.h	/^	LOGIN_CONN_TYPE_MSG_SERV$/;"	e	enum:__anon2
+MsgServInfo	log/default.log	/^2015-06-16 09:34:02,836 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+MsgServInfo	log/default.log	/^2015-06-16 09:34:45,842 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+MsgServInfo	log/default.log	/^2015-06-16 10:02:52,866 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+MsgServInfo	log/default.log	/^2015-06-16 10:38:15,910 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+MsgServInfo	log/default.log	/^2015-06-16 10:39:01,893 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+MsgServInfo	log/default.log	/^2015-06-16 10:44:21,857 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+MsgServInfo	log/default.log	/^2015-06-16 10:57:42,450 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+MsgServInfo	log/default.log	/^2015-06-16 10:59:04,309 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+OnClose	HttpConn.cpp	/^void CHttpConn::OnClose()$/;"	f	class:CHttpConn	signature:()
+OnClose	HttpConn.h	/^    void OnClose();$/;"	p	class:CHttpConn	access:public	signature:()
+OnClose	LoginConn.cpp	/^void CLoginConn::OnClose()$/;"	f	class:CLoginConn	signature:()
+OnClose	LoginConn.h	/^	virtual void OnClose();$/;"	p	class:CLoginConn	access:public	signature:()
+OnConnect	HttpConn.cpp	/^void CHttpConn::OnConnect(net_handle_t handle)$/;"	f	class:CHttpConn	signature:(net_handle_t handle)
+OnConnect	HttpConn.h	/^    void OnConnect(net_handle_t handle);$/;"	p	class:CHttpConn	access:public	signature:(net_handle_t handle)
+OnConnect2	LoginConn.cpp	/^void CLoginConn::OnConnect2(net_handle_t handle, int conn_type)$/;"	f	class:CLoginConn	signature:(net_handle_t handle, int conn_type)
+OnConnect2	LoginConn.h	/^	void OnConnect2(net_handle_t handle, int conn_type);$/;"	p	class:CLoginConn	access:public	signature:(net_handle_t handle, int conn_type)
+OnRead	HttpConn.cpp	/^void CHttpConn::OnRead()$/;"	f	class:CHttpConn	signature:()
+OnRead	HttpConn.h	/^    void OnRead();$/;"	p	class:CHttpConn	access:public	signature:()
+OnTimer	HttpConn.cpp	/^void CHttpConn::OnTimer(uint64_t curr_tick)$/;"	f	class:CHttpConn	signature:(uint64_t curr_tick)
+OnTimer	HttpConn.h	/^    void OnTimer(uint64_t curr_tick);$/;"	p	class:CHttpConn	access:public	signature:(uint64_t curr_tick)
+OnTimer	LoginConn.cpp	/^void CLoginConn::OnTimer(uint64_t curr_tick)$/;"	f	class:CLoginConn	signature:(uint64_t curr_tick)
+OnTimer	LoginConn.h	/^	virtual void OnTimer(uint64_t curr_tick);$/;"	p	class:CLoginConn	access:public	signature:(uint64_t curr_tick)
+OnWrite	HttpConn.cpp	/^void CHttpConn::OnWrite()$/;"	f	class:CHttpConn	signature:()
+OnWrite	HttpConn.h	/^    void OnWrite();$/;"	p	class:CHttpConn	access:public	signature:()
+OnWriteComlete	HttpConn.cpp	/^void CHttpConn::OnWriteComlete()$/;"	f	class:CHttpConn	signature:()
+OnWriteComlete	HttpConn.h	/^    void OnWriteComlete();$/;"	p	class:CHttpConn	access:public	signature:()
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	104;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	107;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	110;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	113;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	116;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	119;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	122;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	125;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	128;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	131;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	134;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	137;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	140;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	146;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	149;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	152;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	155;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	158;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	161;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	164;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	167;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	170;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	173;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	176;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	179;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	182;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	101;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	104;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	107;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	110;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	113;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	116;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	119;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	122;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	125;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	128;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	134;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	137;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	140;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	143;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	146;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	149;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	152;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	155;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	158;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	161;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	164;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	167;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	170;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	92;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	95;"	d	file:
+PLATFORM_ID	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	98;"	d	file:
+Pid	log/default.log	/^2015-06-16 08:07:35,853 [INFO  IM] - <util.cpp>|<206>|<writePid>,Pid = 8311$/;"	v
+Pid	log/default.log	/^2015-06-16 08:50:28,880 [INFO  IM] - <util.cpp>|<206>|<writePid>,Pid = 11483$/;"	v
+Pid	log/default.log	/^2015-06-16 08:51:09,163 [INFO  IM] - <util.cpp>|<206>|<writePid>,Pid = 11502$/;"	v
+Pid	log/default.log	/^2015-06-16 09:33:04,540 [INFO  IM] - <util.cpp>|<206>|<writePid>,Pid = 12250$/;"	v
+Pid	log/default.log	/^2015-06-16 09:34:33,868 [INFO  IM] - <util.cpp>|<206>|<writePid>,Pid = 12289$/;"	v
+Pid	log/default.log	/^2015-06-16 10:02:39,270 [INFO  IM] - <util.cpp>|<206>|<writePid>,Pid = 12447$/;"	v
+Pid	log/default.log	/^2015-06-16 10:37:14,479 [INFO  IM] - <util.cpp>|<207>|<writePid>,Pid = 12680$/;"	v
+Pid	log/default.log	/^2015-06-16 10:37:37,407 [INFO  IM] - <util.cpp>|<207>|<writePid>,Pid = 12716$/;"	v
+Pid	log/default.log	/^2015-06-16 10:38:55,885 [INFO  IM] - <util.cpp>|<207>|<writePid>,Pid = 12735$/;"	v
+Pid	log/default.log	/^2015-06-16 10:44:06,640 [INFO  IM] - <util.cpp>|<207>|<writePid>,Pid = 12924$/;"	v
+READ_BUF_SIZE	HttpConn.h	17;"	d
+Send	HttpConn.cpp	/^int CHttpConn::Send(void* data, int len)$/;"	f	class:CHttpConn	signature:(void* data, int len)
+Send	HttpConn.h	/^	int Send(void* data, int len);$/;"	p	class:CHttpConn	access:public	signature:(void* data, int len)
+_HandleMsgServInfo	LoginConn.cpp	/^void CLoginConn::_HandleMsgServInfo(CImPdu* pPdu)$/;"	f	class:CLoginConn	signature:(CImPdu* pPdu)
+_HandleMsgServInfo	LoginConn.h	/^	void _HandleMsgServInfo(CImPdu* pPdu);$/;"	p	class:CLoginConn	access:private	signature:(CImPdu* pPdu)
+_HandleMsgServRequest	HttpConn.cpp	/^void CHttpConn::_HandleMsgServRequest(string& url, string& post_data)$/;"	f	class:CHttpConn	signature:(string& url, string& post_data)
+_HandleMsgServRequest	HttpConn.h	/^    void _HandleMsgServRequest(string& url, string& post_data);$/;"	p	class:CHttpConn	access:private	signature:(string& url, string& post_data)
+_HandleMsgServRequest	LoginConn.cpp	/^void CLoginConn::_HandleMsgServRequest(CImPdu* pPdu)$/;"	f	class:CLoginConn	signature:(CImPdu* pPdu)
+_HandleMsgServRequest	LoginConn.h	/^	void _HandleMsgServRequest(CImPdu* pPdu);$/;"	p	class:CLoginConn	access:private	signature:(CImPdu* pPdu)
+_HandleUserCntUpdate	LoginConn.cpp	/^void CLoginConn::_HandleUserCntUpdate(CImPdu* pPdu)$/;"	f	class:CLoginConn	signature:(CImPdu* pPdu)
+_HandleUserCntUpdate	LoginConn.h	/^	void _HandleUserCntUpdate(CImPdu* pPdu);$/;"	p	class:CLoginConn	access:private	signature:(CImPdu* pPdu)
+_IPPARSER_H_	ipparser.h	13;"	d
+__HTTP_CONN_H__	HttpConn.h	9;"	d
+__anon3::cur_conn_cnt	LoginConn.h	/^    uint32_t	cur_conn_cnt;$/;"	m	struct:__anon3	access:public
+__anon3::hostname	LoginConn.h	/^    string 		hostname;	\/\/ 消息服务器的主机名$/;"	m	struct:__anon3	access:public
+__anon3::ip_addr1	LoginConn.h	/^    string		ip_addr1;	\/\/ 电信IP$/;"	m	struct:__anon3	access:public
+__anon3::ip_addr2	LoginConn.h	/^    string		ip_addr2;	\/\/ 网通IP$/;"	m	struct:__anon3	access:public
+__anon3::max_conn_cnt	LoginConn.h	/^    uint32_t	max_conn_cnt;$/;"	m	struct:__anon3	access:public
+__anon3::port	LoginConn.h	/^    uint16_t	port;$/;"	m	struct:__anon3	access:public
+client_callback	login_server.cpp	/^void client_callback(void* callback_data, uint8_t msg, uint32_t handle, void* pParam)$/;"	f	signature:(void* callback_data, uint8_t msg, uint32_t handle, void* pParam)
+cur_conn_cnt	LoginConn.h	/^    uint32_t	cur_conn_cnt;$/;"	m	struct:__anon3	access:public
+cur_conn_cnt	log/default.log	/^2015-06-16 09:34:02,836 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+cur_conn_cnt	log/default.log	/^2015-06-16 09:34:45,842 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+cur_conn_cnt	log/default.log	/^2015-06-16 10:02:52,866 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+cur_conn_cnt	log/default.log	/^2015-06-16 10:38:15,910 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+cur_conn_cnt	log/default.log	/^2015-06-16 10:39:01,893 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+cur_conn_cnt	log/default.log	/^2015-06-16 10:44:21,857 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+cur_conn_cnt	log/default.log	/^2015-06-16 10:57:42,450 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+cur_conn_cnt	log/default.log	/^2015-06-16 10:59:04,309 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+cxx_handler	login_server.cpp	/^void cxx_handler(int sig)$/;"	f	signature:(int sig)
+format	tags	/^!_TAG_FILE_FORMAT	2	\/extended format; --format=1 will not append ;" to lines\/$/;"	v
+g_client_conn_map	LoginConn.cpp	/^static ConnMap_t g_client_conn_map;$/;"	v	file:
+g_conn_handle_generator	HttpConn.cpp	/^static uint32_t g_conn_handle_generator = 0;$/;"	v	file:
+g_http_conn_map	HttpConn.cpp	/^static HttpConnMap_t g_http_conn_map;$/;"	v	file:
+g_msg_serv_conn_map	LoginConn.cpp	/^static ConnMap_t g_msg_serv_conn_map;$/;"	v	file:
+g_msg_serv_info	LoginConn.cpp	/^map<uint32_t, msg_serv_info_t*> g_msg_serv_info;$/;"	v
+g_total_online_user_cnt	LoginConn.cpp	/^static uint32_t g_total_online_user_cnt = 0;	\/\/ 并发在线总人数$/;"	v	file:
+hostname	LoginConn.h	/^    string 		hostname;	\/\/ 消息服务器的主机名$/;"	m	struct:__anon3	access:public
+http_callback	login_server.cpp	/^void http_callback(void* callback_data, uint8_t msg, uint32_t handle, void* pParam)$/;"	f	signature:(void* callback_data, uint8_t msg, uint32_t handle, void* pParam)
+http_conn_timer_callback	HttpConn.cpp	/^void http_conn_timer_callback(void* callback_data, uint8_t msg, uint32_t handle, void* pParam)$/;"	f	signature:(void* callback_data, uint8_t msg, uint32_t handle, void* pParam)
+httpconn_callback	HttpConn.cpp	/^void httpconn_callback(void* callback_data, uint8_t msg, uint32_t handle, uint32_t uParam, void* pParam)$/;"	f	signature:(void* callback_data, uint8_t msg, uint32_t handle, uint32_t uParam, void* pParam)
+in_buf	log/default.log	/^2015-06-16 14:32:56,842 [DEBUG stdout] - <HttpConn.cpp>|<177>|<OnRead>,in_buf = GET \/msg_server HTTP\/1.1$/;"	v
+info_arch	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_arch	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_compiler	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_platform	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+init_http_conn	HttpConn.cpp	/^void init_http_conn()$/;"	f	signature:()
+init_http_conn	HttpConn.h	/^void init_http_conn();$/;"	p	signature:()
+init_login_conn	LoginConn.cpp	/^void init_login_conn()$/;"	f	signature:()
+init_login_conn	LoginConn.h	/^void init_login_conn();$/;"	p	signature:()
+ip_addr1	LoginConn.h	/^    string		ip_addr1;	\/\/ 电信IP$/;"	m	struct:__anon3	access:public
+ip_addr1	log/default.log	/^2015-06-16 09:34:02,836 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr1	log/default.log	/^2015-06-16 09:34:45,842 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr1	log/default.log	/^2015-06-16 10:02:52,866 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr1	log/default.log	/^2015-06-16 10:38:15,910 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr1	log/default.log	/^2015-06-16 10:39:01,893 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr1	log/default.log	/^2015-06-16 10:44:21,857 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr1	log/default.log	/^2015-06-16 10:57:42,450 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr1	log/default.log	/^2015-06-16 10:59:04,309 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr2	LoginConn.h	/^    string		ip_addr2;	\/\/ 网通IP$/;"	m	struct:__anon3	access:public
+ip_addr2	log/default.log	/^2015-06-16 09:34:02,836 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr2	log/default.log	/^2015-06-16 09:34:45,842 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr2	log/default.log	/^2015-06-16 10:02:52,866 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr2	log/default.log	/^2015-06-16 10:38:15,910 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr2	log/default.log	/^2015-06-16 10:39:01,893 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr2	log/default.log	/^2015-06-16 10:44:21,857 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr2	log/default.log	/^2015-06-16 10:57:42,450 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+ip_addr2	log/default.log	/^2015-06-16 10:59:04,309 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+isTelcome	ipparser.cpp	/^bool IpParser::isTelcome(const char *pIp)$/;"	f	class:IpParser	signature:(const char *pIp)
+isTelcome	ipparser.h	/^    bool isTelcome(const char* ip);$/;"	p	class:IpParser	access:public	signature:(const char* ip)
+login_conn_timer_callback	LoginConn.cpp	/^void login_conn_timer_callback(void* callback_data, uint8_t msg, uint32_t handle, void* pParam)$/;"	f	signature:(void* callback_data, uint8_t msg, uint32_t handle, void* pParam)
+m_busy	HttpConn.h	/^	bool			m_busy;$/;"	m	class:CHttpConn	access:protected
+m_cHttpParser	HttpConn.h	/^    CHttpParserWrapper m_cHttpParser;$/;"	m	class:CHttpConn	access:protected
+m_conn_handle	HttpConn.h	/^	uint32_t		m_conn_handle;$/;"	m	class:CHttpConn	access:protected
+m_conn_type	LoginConn.h	/^	int	m_conn_type;$/;"	m	class:CLoginConn	access:private
+m_in_buf	HttpConn.h	/^	CSimpleBuffer	m_in_buf;$/;"	m	class:CHttpConn	access:protected
+m_last_recv_tick	HttpConn.h	/^	uint64_t		m_last_recv_tick;$/;"	m	class:CHttpConn	access:protected
+m_last_send_tick	HttpConn.h	/^	uint64_t		m_last_send_tick;$/;"	m	class:CHttpConn	access:protected
+m_out_buf	HttpConn.h	/^	CSimpleBuffer	m_out_buf;$/;"	m	class:CHttpConn	access:protected
+m_peer_ip	HttpConn.h	/^	std::string		m_peer_ip;$/;"	m	class:CHttpConn	access:protected
+m_peer_port	HttpConn.h	/^	uint16_t		m_peer_port;$/;"	m	class:CHttpConn	access:protected
+m_sock_handle	HttpConn.h	/^	net_handle_t	m_sock_handle;$/;"	m	class:CHttpConn	access:protected
+m_state	HttpConn.h	/^    uint32_t        m_state;$/;"	m	class:CHttpConn	access:protected
+main	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f	signature:(int argc, char* argv[])
+main	build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f	signature:()
+main	build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f	signature:(int argc, char* argv[])
+main	login_server.cpp	/^int main(int argc, char* argv[])$/;"	f	signature:(int argc, char* argv[])
+max_conn_cnt	LoginConn.h	/^    uint32_t	max_conn_cnt;$/;"	m	struct:__anon3	access:public
+max_conn_cnt	log/default.log	/^2015-06-16 09:34:02,836 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+max_conn_cnt	log/default.log	/^2015-06-16 09:34:45,842 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+max_conn_cnt	log/default.log	/^2015-06-16 10:02:52,866 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+max_conn_cnt	log/default.log	/^2015-06-16 10:38:15,910 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+max_conn_cnt	log/default.log	/^2015-06-16 10:39:01,893 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+max_conn_cnt	log/default.log	/^2015-06-16 10:44:21,857 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+max_conn_cnt	log/default.log	/^2015-06-16 10:57:42,450 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+max_conn_cnt	log/default.log	/^2015-06-16 10:59:04,309 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+msg_serv_callback	login_server.cpp	/^void msg_serv_callback(void* callback_data, uint8_t msg, uint32_t handle, void* pParam)$/;"	f	signature:(void* callback_data, uint8_t msg, uint32_t handle, void* pParam)
+msg_serv_info_t	LoginConn.h	/^} msg_serv_info_t;$/;"	t	typeref:struct:__anon3
+pIpParser	login_server.cpp	/^IpParser* pIpParser = NULL;$/;"	v
+port	LoginConn.h	/^    uint16_t	port;$/;"	m	struct:__anon3	access:public
+port	log/default.log	/^2015-06-16 09:34:02,836 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+port	log/default.log	/^2015-06-16 09:34:45,842 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+port	log/default.log	/^2015-06-16 10:02:52,866 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+port	log/default.log	/^2015-06-16 10:38:15,910 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+port	log/default.log	/^2015-06-16 10:39:01,893 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+port	log/default.log	/^2015-06-16 10:44:21,857 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+port	log/default.log	/^2015-06-16 10:57:42,450 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+port	log/default.log	/^2015-06-16 10:59:04,309 [INFO  IM] - <LoginConn.cpp>|<162>|<_HandleMsgServInfo>,MsgServInfo, ip_addr1=localhost, ip_addr2=localhost, port=8000, max_conn_cnt=100000, cur_conn_cnt=0, hostname: localhost. $/;"	v
+segfault_test	login_server.cpp	/^void segfault_test(int n)$/;"	f	signature:(int n)
+segfault_test2	login_server.cpp	/^void segfault_test2()$/;"	f	signature:()
+strDiscovery	login_server.cpp	/^string strDiscovery;\/\/发现获取地址$/;"	v
+strMsfsUrl	login_server.cpp	/^string strMsfsUrl;$/;"	v
+td	build/CMakeFiles/CompilerIdC/a.out	/^ELF/;"	v
+td	build/CMakeFiles/CompilerIdCXX/a.out	/^ELF/;"	v
+unknown	log/default.log	/^2015-06-16 15:31:45,338 [INFO  IM] - <HttpConn.cpp>|<200>|<OnRead>,url unknown, url=\/manager\/html $/;"	v
+url	log/default.log	/^2015-06-16 15:31:45,338 [INFO  IM] - <HttpConn.cpp>|<200>|<OnRead>,url unknown, url=\/manager\/html $/;"	v
+~CHttpConn	HttpConn.cpp	/^CHttpConn::~CHttpConn()$/;"	f	class:CHttpConn	signature:()
+~CHttpConn	HttpConn.h	/^	virtual ~CHttpConn();$/;"	p	class:CHttpConn	access:public	signature:()
+~CLoginConn	LoginConn.cpp	/^CLoginConn::~CLoginConn()$/;"	f	class:CLoginConn	signature:()
+~CLoginConn	LoginConn.h	/^	virtual ~CLoginConn();$/;"	p	class:CLoginConn	access:public	signature:()
+~IpParser	ipparser.cpp	/^IpParser::~IpParser()$/;"	f	class:IpParser	signature:()
+~IpParser	ipparser.h	/^        virtual ~IpParser();$/;"	p	class:IpParser	access:public	signature:()

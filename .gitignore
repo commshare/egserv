@@ -6,7 +6,7 @@
 *.rdb
 *.gch
 *.pch
-
+*.pid
 **/CMakeFiles/
 **/log/
 **/protobuf-2.6.1/
