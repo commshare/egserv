@@ -1,9 +1,38 @@
-int stacktrace();
-void c_array();
+#include <stdio.h>
 
-int main(int argc, char* argv[])
+extern int stacktrace();
+extern void c_array();
+struct Cbstruc{
+    void (*cb)();
+};
+
+
+void out_call(Cbstruc* cbs)
 {
-    stacktrace();
-    c_array();
+    cbs->cb();
+}
+
+class CTest{
+public:
+    CTest(){}
+    virtual ~CTest() {}
+    
+    void run(){
+        Cbstruc cbs;
+        cbs.cb = m_cb;
+        out_call(&cbs);
+    }
+    
+    static void m_cb(){
+        printf("this is mcb...\n");
+    }
+};
+
+int main()
+{
+    // stacktrace();
+    // c_array();
+    CTest t;
+    t.run();
     return 0; 
 }
