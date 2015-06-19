@@ -24,7 +24,7 @@ using namespace msfs;
 
 FileManager* FileManager::m_instance = NULL;
 FileManager* g_fileManager = NULL;
-CConfigFileReader config_file("msfs.conf");
+
 CThreadPool g_PostThreadPool;
 CThreadPool g_GetThreadPool;
 
@@ -89,33 +89,41 @@ void http_callback(void* callback_data, uint8_t msg, uint32_t handle,
     }
 }
 
-void doQuitJob()
+void doQuitJob(CConfigFileReader config_file)
 {
 	char fileCntBuf[20] = {0};
 	snprintf(fileCntBuf, 20, "%llu", g_fileManager->getFileCntCurr());
-    	config_file.SetConfigValue("FileCnt", fileCntBuf);
+    config_file.SetConfigValue("FileCnt", fileCntBuf);
 	FileManager::destroyInstance();
-netlib_destroy();
+    netlib_destroy();
     log("I'm ready quit...");
 }
-void Stop(int signo)
+// void Stop(int signo)
+// {
+//     log("receive signal:%d", signo);
+//     switch(signo)
+//     {
+//     case SIGINT:
+//     case SIGTERM:
+//     case SIGQUIT:
+//         doQuitJob(config_file);
+//         _exit(0);
+//         break;
+//     default:
+//         cout<< "unknown signal"<<endl;
+//         _exit(0);
+//     }
+// }
+
+void cxx_handler(int sig)
 {
-    log("receive signal:%d", signo);
-    switch(signo)
-    {
-    case SIGINT:
-    case SIGTERM:
-    case SIGQUIT:
-        doQuitJob();
-        _exit(0);
-        break;
-    default:
-        cout<< "unknown signal"<<endl;
-        _exit(0);
-    }
+  print_stacktrace();
+  exit(1);
 }
+
 int main(int argc, char* argv[])
 {
+    signal(SIGSEGV, cxx_handler);
     for(int i=0; i < argc; ++i)
        {
            if(strncmp(argv[i], "-d", 2) == 0)
@@ -130,7 +138,7 @@ int main(int argc, char* argv[])
        }
     log("MsgServer max files can open: %d", getdtablesize());
 
-
+    CConfigFileReader config_file("msfs.conf");
     char* listen_ip = config_file.GetConfigName("ListenIP");
     char* str_listen_port = config_file.GetConfigName("ListenPort");
     char* base_dir = config_file.GetConfigName("BaseDir");
@@ -178,9 +186,9 @@ int main(int argc, char* argv[])
             return ret;
     }
 
-    signal(SIGINT, Stop);
-    signal (SIGTERM, Stop);
-    signal (SIGQUIT, Stop);
+    // signal(SIGINT, Stop);
+    // signal (SIGTERM, Stop);
+    // signal (SIGQUIT, Stop);
     signal(SIGPIPE, SIG_IGN);
     signal (SIGHUP, SIG_IGN);
 

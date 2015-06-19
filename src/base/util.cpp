@@ -2,8 +2,8 @@
 #include <sstream>
 using namespace std;
 
-CSLog g_imlog = CSLog(LOG_MODULE_IM);
-CSLog g_imdebug = CSLog("stdout");
+CSLog g_imlog = CSLog("IM");
+CSLog g_imdebug = CSLog("IMDEBUG");
 
 CRefObject::CRefObject()
 {

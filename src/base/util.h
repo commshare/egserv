@@ -46,7 +46,6 @@ private:
 	CLock*	m_lock;
 };
 
-#define LOG_MODULE_IM         "IM"
 
 extern CSLog g_imlog;
 extern CSLog g_imdebug;

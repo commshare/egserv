@@ -55,6 +55,7 @@ int main(int argc, char* argv[])
 	char* ip_addr1 = config_file.GetConfigName("IpAddr1");	// 电信IP
 	char* ip_addr2 = config_file.GetConfigName("IpAddr2");	// 网通IP
 	char* str_max_conn_cnt = config_file.GetConfigName("MaxConnCnt");
+	printf("str---max = %s\n", str_max_conn_cnt);
     char* str_aes_key = config_file.GetConfigName("aesKey");
 
 	uint32_t db_server_count = 0;
