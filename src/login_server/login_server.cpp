@@ -139,8 +139,6 @@ int main(int argc, char* argv[])
     init_http_conn();
 
 	printf("now enter the event loop...\n");
-	
-	debug("this is debug test...");
     
     writePid();
 

@@ -24,7 +24,7 @@ using namespace msfs;
 
 FileManager* FileManager::m_instance = NULL;
 FileManager* g_fileManager = NULL;
-
+CConfigFileReader config_file("msfs.conf");
 CThreadPool g_PostThreadPool;
 CThreadPool g_GetThreadPool;
 
@@ -89,7 +89,7 @@ void http_callback(void* callback_data, uint8_t msg, uint32_t handle,
     }
 }
 
-void doQuitJob(CConfigFileReader config_file)
+void doQuitJob()
 {
 	char fileCntBuf[20] = {0};
 	snprintf(fileCntBuf, 20, "%llu", g_fileManager->getFileCntCurr());
@@ -98,22 +98,22 @@ void doQuitJob(CConfigFileReader config_file)
     netlib_destroy();
     log("I'm ready quit...");
 }
-// void Stop(int signo)
-// {
-//     log("receive signal:%d", signo);
-//     switch(signo)
-//     {
-//     case SIGINT:
-//     case SIGTERM:
-//     case SIGQUIT:
-//         doQuitJob(config_file);
-//         _exit(0);
-//         break;
-//     default:
-//         cout<< "unknown signal"<<endl;
-//         _exit(0);
-//     }
-// }
+void Stop(int signo)
+{
+    log("receive signal:%d", signo);
+    switch(signo)
+    {
+    case SIGINT:
+    case SIGTERM:
+    case SIGQUIT:
+        doQuitJob();
+        _exit(0);
+        break;
+    default:
+        cout<< "unknown signal"<<endl;
+        _exit(0);
+    }
+}
 
 void cxx_handler(int sig)
 {
@@ -138,7 +138,6 @@ int main(int argc, char* argv[])
        }
     log("MsgServer max files can open: %d", getdtablesize());
 
-    CConfigFileReader config_file("msfs.conf");
     char* listen_ip = config_file.GetConfigName("ListenIP");
     char* str_listen_port = config_file.GetConfigName("ListenPort");
     char* base_dir = config_file.GetConfigName("BaseDir");

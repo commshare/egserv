@@ -174,7 +174,6 @@ void CHttpConn::OnRead()
 	char* in_buf = (char*)m_in_buf.GetBuffer();
 	uint32_t buf_len = m_in_buf.GetWriteOffset();
 	in_buf[buf_len] = '\0';
-	debug("in_buf = %s", in_buf);
     
     // 如果buf_len 过长可能是受到攻击，则断开连接
     // 正常的url最大长度为2048，我们接受的所有数据长度不得大于1K
@@ -250,7 +249,6 @@ void CHttpConn::_HandleMsgServRequest(string& url, string& post_data)
     map<uint32_t, msg_serv_info_t*>::iterator it;
     if(g_msg_serv_info.size() <= 0)
     {
-        debug("in .....");
         Json::Value value;
         value["code"] = 1;
         value["msg"] = "没有msg_server";
