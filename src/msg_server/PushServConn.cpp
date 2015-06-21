@@ -160,7 +160,7 @@ void CPushServConn::OnConfirm()
 
 void CPushServConn::OnClose()
 {
-	log("onclose from push server handle=%d ", m_handle);
+// 	log("onclose from push server handle=%d ", m_handle);
 	Close();
 }
 
