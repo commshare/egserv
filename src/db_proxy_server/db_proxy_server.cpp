@@ -153,10 +153,13 @@ int main(int argc, char* argv[])
 		if (ret == NETLIB_ERROR)
 			return ret;
 	}
-
+	
 	printf("server start listen on: %s:%d\n", listen_ip,  listen_port);
 	printf("now enter the event loop...\n");
+	
     writePid();
+    // uint32_t curPid = getpid();
+    printf("pid is %d\n", getpid());
 	netlib_eventloop(10);
 
 	return 0;
