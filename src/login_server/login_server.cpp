@@ -141,7 +141,7 @@ int main(int argc, char* argv[])
 	printf("now enter the event loop...\n");
     
     writePid();
-
+	printf("pid is %d\n", getpid());
 	netlib_eventloop();
 
 	return 0;

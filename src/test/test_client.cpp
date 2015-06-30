@@ -171,7 +171,8 @@ int main(int argc, char* argv[])
 
 	if (ret == NETLIB_ERROR)
 		return ret;
-    
+	
+    printf("pid is %d\n", getpid());
 	netlib_eventloop();
 
 	return 0;
