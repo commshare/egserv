@@ -193,7 +193,7 @@ void CHttpConn::OnRead()
 		string url =  m_cHttpParser.GetUrl();
 		if (strncmp(url.c_str(), "/msg_server", 11) == 0) {
             string content = m_cHttpParser.GetBodyContent();
-            debug("url = %s", url.c_str());
+            logd("url = %s", url.c_str());
             _HandleMsgServRequest(url, content);
 		} else {
 			log("url unknown, url=%s ", url.c_str());
@@ -299,7 +299,7 @@ void CHttpConn::_HandleMsgServRequest(string& url, string& post_data)
             value["msfsBackup"] = strMsfsUrl;
         }
         value["discovery"] = strDiscovery;
-        value["port"] = int2string(it_min_conn->second->port);
+        value["port"] = it_min_conn->second->port; //int2string(it_min_conn->second->port);
         string strContent = value.toStyledString();
         char* szContent = new char[HTTP_RESPONSE_HTML_MAX];
         uint32_t nLen = strContent.length();

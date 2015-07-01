@@ -23,11 +23,11 @@
 #include "IPacketCallback.h"
 #include "SeqAlloctor.h"
 
-class ClientConn : public CImConn
+class CClientConn : public CImConn
 {
 public:
-	ClientConn();
-	virtual ~ClientConn();
+	CClientConn();
+	virtual ~CClientConn();
 
 	bool IsOpen() { return m_bOpen; }
 

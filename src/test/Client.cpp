@@ -15,9 +15,9 @@
 #include "ClientConn.h"
 
 
-static ClientConn*  g_pConn = NULL;
+static CClientConn*  g_pConn = NULL;
 
-static bool         g_bLogined = false;
+static bool g_bLogined = false;
 
 CClient::CClient(const string& strName, const string& strPass, const string strDomain):
 m_strName(strName),
@@ -43,7 +43,7 @@ void CClient::TimerCallback(void* callback_data, uint8_t msg, uint32_t handle, v
 
 void CClient::onError(uint32_t nSeqNo, uint32_t nCmd,const string& strMsg)
 {
-    g_imlog.Error("get error:%d, msg:%s", nCmd, strMsg.c_str());
+    loge("get error:%d, msg:%s", nCmd, strMsg.c_str());
 }
 
 void CClient::connect()
@@ -54,16 +54,14 @@ void CClient::connect()
     CURLcode nRet = httpClient.Get(strUrl, strResp);
     if(nRet != CURLE_OK)
     {
-        printf("login falied. access url:%s error\n", strUrl.c_str());
-        PROMPTION;
+        loge("login falied. access url:%s error\n", strUrl.c_str());
         return;
     }
     Json::Reader reader;
     Json::Value value;
     if(!reader.parse(strResp, value))
     {
-        printf("login falied. parse response error:%s\n", strResp.c_str());
-        PROMPTION;
+        loge("login falied. parse response error:%s\n", strResp.c_str());
         return;
     }
     string strPriorIp, strBackupIp;
@@ -73,8 +71,7 @@ void CClient::connect()
         if(nRet != 0)
         {
             string strMsg = value["msg"].asString();
-            printf("login falied. errorMsg:%s\n", strMsg.c_str());
-            PROMPTION;
+            loge("login falied. errorMsg:%s\n", strMsg.c_str());
             return;
         }
         strPriorIp = value["priorIP"].asString();
@@ -82,12 +79,11 @@ void CClient::connect()
         nPort = value["port"].asUInt();
         
     } catch (std::runtime_error msg) {
-        printf("login falied. get json error:%s\n", strResp.c_str());
-        PROMPTION;
+        loge("login falied. get json error:%s\n", msg.what());
         return;
     }
     
-    g_pConn = new ClientConn();
+    g_pConn = new CClientConn();
     m_nHandle = g_pConn->connect(strPriorIp.c_str(), nPort, m_strName, m_strPass);
     if(m_nHandle != INVALID_SOCKET)
     {

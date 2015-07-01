@@ -132,16 +132,10 @@ int main(int argc, char* argv[])
             return ret;
     }
     
-	printf("server start listen on:\nFor MsgServer: %s:%d\nFor http:%s:%d\n",
-			 msg_server_listen_ip, msg_server_port, http_listen_ip, http_port);
-
 	init_login_conn();
     init_http_conn();
 
-	printf("now enter the event loop...\n");
-    
     writePid();
-	printf("pid is %d\n", getpid());
 	netlib_eventloop();
 
 	return 0;

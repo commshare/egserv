@@ -1,7 +1,7 @@
 /*================================================================
  *   Copyright (C) 2014 All rights reserved.
  *
- *   文件名称：ClientConn.cpp
+ *   文件名称：ClentConn.cpp
  *   创 建 者：Zhang Yuanhao
  *   邮    箱：bluefoxah@gmail.com
  *   创建日期：2014年12月30日
@@ -13,18 +13,18 @@
 #include "Common.h"
 
 
-ClientConn::ClientConn():
+CClientConn::CClientConn():
 m_bOpen(false)
 {
     m_pSeqAlloctor = CSeqAlloctor::getInstance();
 }
 
-ClientConn::~ClientConn()
+CClientConn::~CClientConn()
 {
 
 }
 
-net_handle_t ClientConn::connect(const string& strIp, uint16_t nPort, const string& strName, const string& strPass)
+net_handle_t CClientConn::connect(const string& strIp, uint16_t nPort, const string& strName, const string& strPass)
 {
 	m_handle = netlib_connect(strIp.c_str(), nPort, imconn_callback, NULL);
     return  m_handle;
@@ -32,7 +32,7 @@ net_handle_t ClientConn::connect(const string& strIp, uint16_t nPort, const stri
 
 
 
-void ClientConn::OnConfirm()
+void CClientConn::OnConfirm()
 {
     if(m_pCallback)
     {
@@ -40,13 +40,13 @@ void ClientConn::OnConfirm()
     }
 }
 
-void ClientConn::OnClose()
+void CClientConn::OnClose()
 {
     log("onclose from handle=%d\n", m_handle);
     Close();
 }
 
-void ClientConn::OnTimer(uint64_t curr_tick)
+void CClientConn::OnTimer(uint64_t curr_tick)
 {
     if (curr_tick > m_last_send_tick + CLIENT_HEARTBEAT_INTERVAL) {
         CImPdu cPdu;
@@ -66,7 +66,7 @@ void ClientConn::OnTimer(uint64_t curr_tick)
 }
 
 
-uint32_t ClientConn::login(const string &strName, const string &strPass)
+uint32_t CClientConn::login(const string &strName, const string &strPass)
 {
     CImPdu cPdu;
     IM::Login::IMLoginReq msg;
@@ -84,7 +84,7 @@ uint32_t ClientConn::login(const string &strName, const string &strPass)
     return nSeqNo;
 }
 
-uint32_t ClientConn::getUser(uint32_t nUserId, uint32_t nTime)
+uint32_t CClientConn::getUser(uint32_t nUserId, uint32_t nTime)
 {
     CImPdu cPdu;
     IM::Buddy::IMAllUserReq msg;
@@ -99,7 +99,7 @@ uint32_t ClientConn::getUser(uint32_t nUserId, uint32_t nTime)
     return nSeqNo;
 }
 
-uint32_t ClientConn::getUserInfo(uint32_t nUserId, list<uint32_t>& lsUserId)
+uint32_t CClientConn::getUserInfo(uint32_t nUserId, list<uint32_t>& lsUserId)
 {
     CImPdu cPdu;
     IM::Buddy::IMUsersInfoReq msg;
@@ -116,7 +116,7 @@ uint32_t ClientConn::getUserInfo(uint32_t nUserId, list<uint32_t>& lsUserId)
     return nSeqNo;
 }
 
-uint32_t ClientConn::sendMessage(uint32_t nFromId, uint32_t nToId, IM::BaseDefine::MsgType nType, const string& strMsgData)
+uint32_t CClientConn::sendMessage(uint32_t nFromId, uint32_t nToId, IM::BaseDefine::MsgType nType, const string& strMsgData)
 {
     CImPdu cPdu;
     IM::Message::IMMsgData msg;
@@ -135,7 +135,7 @@ uint32_t ClientConn::sendMessage(uint32_t nFromId, uint32_t nToId, IM::BaseDefin
     return nSeqNo;
 }
 
-uint32_t ClientConn::getUnreadMsgCnt(uint32_t nUserId)
+uint32_t CClientConn::getUnreadMsgCnt(uint32_t nUserId)
 {
     CImPdu cPdu;
     IM::Message::IMUnreadMsgCntReq msg;
@@ -150,7 +150,7 @@ uint32_t ClientConn::getUnreadMsgCnt(uint32_t nUserId)
 }
 
 
-uint32_t ClientConn::getRecentSession(uint32_t nUserId, uint32_t nLastTime)
+uint32_t CClientConn::getRecentSession(uint32_t nUserId, uint32_t nLastTime)
 {
     CImPdu cPdu;
     IM::Buddy::IMRecentContactSessionReq msg;
@@ -165,7 +165,7 @@ uint32_t ClientConn::getRecentSession(uint32_t nUserId, uint32_t nLastTime)
     return nSeqNo;
 }
 
-uint32_t ClientConn::getMsgList(uint32_t nUserId, IM::BaseDefine::SessionType nType, uint32_t nPeerId, uint32_t nMsgId, uint32_t nMsgCnt)
+uint32_t CClientConn::getMsgList(uint32_t nUserId, IM::BaseDefine::SessionType nType, uint32_t nPeerId, uint32_t nMsgId, uint32_t nMsgCnt)
 {
     CImPdu cPdu;
     IM::Message::IMGetMsgListReq msg;
@@ -183,7 +183,7 @@ uint32_t ClientConn::getMsgList(uint32_t nUserId, IM::BaseDefine::SessionType nT
     return nSeqNo;
 }
 
-uint32_t ClientConn::sendMsgAck(uint32_t nUserId, uint32_t nPeerId, IM::BaseDefine::SessionType nType, uint32_t nMsgId)
+uint32_t CClientConn::sendMsgAck(uint32_t nUserId, uint32_t nPeerId, IM::BaseDefine::SessionType nType, uint32_t nMsgId)
 {
     CImPdu cPdu;
     IM::Message::IMMsgDataReadAck msg;
@@ -200,7 +200,7 @@ uint32_t ClientConn::sendMsgAck(uint32_t nUserId, uint32_t nPeerId, IM::BaseDefi
     return nSeqNo;
 }
 
-void ClientConn::Close()
+void CClientConn::Close()
 {
 	if (m_handle != NETLIB_INVALID_HANDLE) {
 		netlib_close(m_handle);
@@ -208,7 +208,7 @@ void ClientConn::Close()
 	ReleaseRef();
 }
 
-void ClientConn::HandlePdu(CImPdu* pPdu)
+void CClientConn::HandlePdu(CImPdu* pPdu)
 {
     //printf("pdu type = %u\n", pPdu->GetPduType());
 	switch (pPdu->GetCommandId()) {
@@ -244,7 +244,7 @@ void ClientConn::HandlePdu(CImPdu* pPdu)
 		break;
 	}
 }
-void ClientConn::_HandleLoginResponse(CImPdu* pPdu)
+void CClientConn::_HandleLoginResponse(CImPdu* pPdu)
 {
     IM::Login::IMLoginRes msgResp;
     uint32_t nSeqNo = pPdu->GetSeqNum();
@@ -269,7 +269,7 @@ void ClientConn::_HandleLoginResponse(CImPdu* pPdu)
     }
 }
 
-void ClientConn::_HandleUser(CImPdu* pPdu)
+void CClientConn::_HandleUser(CImPdu* pPdu)
 {
     IM::Buddy::IMAllUserRsp msgResp;
     uint32_t nSeqNo = pPdu->GetSeqNum();
@@ -291,7 +291,7 @@ void ClientConn::_HandleUser(CImPdu* pPdu)
     }
 }
 
-void ClientConn::_HandleUserInfo(CImPdu* pPdu)
+void CClientConn::_HandleUserInfo(CImPdu* pPdu)
 {
     IM::Buddy::IMUsersInfoRsp msgResp;
     uint32_t nSeqNo = pPdu->GetSeqNum();
@@ -311,7 +311,7 @@ void ClientConn::_HandleUserInfo(CImPdu* pPdu)
     }
 }
 
-void ClientConn::_HandleSendMsg(CImPdu* pPdu)
+void CClientConn::_HandleSendMsg(CImPdu* pPdu)
 {
     IM::Message::IMMsgDataAck msgResp;
     uint32_t nSeqNo = pPdu->GetSeqNum();
@@ -330,7 +330,7 @@ void ClientConn::_HandleSendMsg(CImPdu* pPdu)
 }
 
 
-void ClientConn::_HandleUnreadCnt(CImPdu* pPdu)
+void CClientConn::_HandleUnreadCnt(CImPdu* pPdu)
 {
     IM::Message::IMUnreadMsgCntRsp msgResp;
     uint32_t nSeqNo = pPdu->GetSeqNum();
@@ -352,7 +352,7 @@ void ClientConn::_HandleUnreadCnt(CImPdu* pPdu)
     }
 }
 
-void ClientConn::_HandleRecentSession(CImPdu *pPdu)
+void CClientConn::_HandleRecentSession(CImPdu *pPdu)
 {
     IM::Buddy::IMRecentContactSessionRsp msgResp;
     uint32_t nSeqNo = pPdu->GetSeqNum();
@@ -373,7 +373,7 @@ void ClientConn::_HandleRecentSession(CImPdu *pPdu)
     }
 }
 
-void ClientConn::_HandleMsgList(CImPdu *pPdu)
+void CClientConn::_HandleMsgList(CImPdu *pPdu)
 {
     IM::Message::IMGetMsgListRsp msgResp;
     uint32_t nSeqNo = pPdu->GetSeqNum();
@@ -397,7 +397,7 @@ void ClientConn::_HandleMsgList(CImPdu *pPdu)
         m_pCallback->onError(nSeqNo, pPdu->GetCommandId(), "parse pb falied");
     }
 }
-void ClientConn::_HandleMsgData(CImPdu* pPdu)
+void CClientConn::_HandleMsgData(CImPdu* pPdu)
 {
     IM::Message::IMMsgData msg;
     uint32_t nSeqNo = pPdu->GetSeqNum();

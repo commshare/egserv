@@ -24,20 +24,19 @@ class CImConn : public CRefObject
 public:
 	CImConn();
 	virtual ~CImConn();
-
-	bool IsBusy() { return m_busy; }
-	int SendPdu(CImPdu* pPdu) { return Send(pPdu->GetBuffer(), pPdu->GetLength()); }
 	int Send(void* data, int len);
-
-	virtual void OnConnect(net_handle_t handle) { m_handle = handle; }
-	virtual void OnConfirm() {}
 	virtual void OnRead();
 	virtual void OnWrite();
-	virtual void OnClose() {}
-	virtual void OnTimer(uint64_t curr_tick) {}
-    virtual void OnWriteCompelete() {};
+	
+	bool IsBusy() { return m_busy; }
+	int SendPdu(CImPdu* pPdu) { return Send(pPdu->GetBuffer(), pPdu->GetLength()); }
 
-	virtual void HandlePdu(CImPdu* pPdu) {}
+	virtual void OnConnect(net_handle_t handle) { m_handle = handle; }
+	virtual void OnConfirm(){}
+	virtual void OnClose(){}
+	virtual void OnTimer(uint64_t){}
+    virtual void OnWriteCompelete(){}
+	virtual void HandlePdu(CImPdu*){}
 
 protected:
 	net_handle_t	m_handle;

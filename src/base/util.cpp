@@ -2,8 +2,11 @@
 #include <sstream>
 using namespace std;
 
-CSLog g_imlog = CSLog("IM");
-CSLog g_imdebug = CSLog("IMDEBUG");
+CSLog g_iminfo = CSLog("INFO");
+CSLog g_imdebug = CSLog("DEBUG");
+CSLog g_imwarn = CSLog("WARN");
+CSLog g_imerror = CSLog("ERROR");
+CSLog g_imtrace = CSLog("TRACE");
 
 CRefObject::CRefObject()
 {

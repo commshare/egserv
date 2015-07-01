@@ -3,4 +3,4 @@
 cd build
 make
 cd ..
-./login_server
+./$1

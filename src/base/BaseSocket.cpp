@@ -51,7 +51,7 @@ int CBaseSocket::Listen(const char* server_ip, uint16_t port, callback_t callbac
 	m_socket = socket(AF_INET, SOCK_STREAM, 0);
 	if (m_socket == INVALID_SOCKET)
 	{
-		printf("socket failed, err_code=%d\n", _GetErrorCode());
+		loge("socket failed, err_code=%d\n", _GetErrorCode());
 		return NETLIB_ERROR;
 	}
 
@@ -63,7 +63,7 @@ int CBaseSocket::Listen(const char* server_ip, uint16_t port, callback_t callbac
     int ret = ::bind(m_socket, (sockaddr*)&serv_addr, sizeof(serv_addr));
 	if (ret == SOCKET_ERROR)
 	{
-		log("bind failed, err_code=%d", _GetErrorCode());
+		loge("bind failed, err_code=%d", _GetErrorCode());
 		closesocket(m_socket);
 		return NETLIB_ERROR;
 	}
@@ -71,7 +71,7 @@ int CBaseSocket::Listen(const char* server_ip, uint16_t port, callback_t callbac
 	ret = listen(m_socket, 64);
 	if (ret == SOCKET_ERROR)
 	{
-		log("listen failed, err_code=%d", _GetErrorCode());
+		loge("listen failed, err_code=%d", _GetErrorCode());
 		closesocket(m_socket);
 		return NETLIB_ERROR;
 	}
@@ -97,7 +97,7 @@ net_handle_t CBaseSocket::Connect(const char* server_ip, uint16_t port, callback
 	m_socket = socket(AF_INET, SOCK_STREAM, 0);
 	if (m_socket == INVALID_SOCKET)
 	{
-		log("socket failed, err_code=%d", _GetErrorCode());
+		loge("socket failed, err_code=%d", _GetErrorCode());
 		return NETLIB_INVALID_HANDLE;
 	}
 
@@ -109,7 +109,7 @@ net_handle_t CBaseSocket::Connect(const char* server_ip, uint16_t port, callback
 	int ret = connect(m_socket, (sockaddr*)&serv_addr, sizeof(serv_addr));
 	if ( (ret == SOCKET_ERROR) && (!_IsBlock(_GetErrorCode())) )
 	{
-		log("connect failed, err_code=%d", _GetErrorCode());
+		loge("connect failed, err_code=%d", _GetErrorCode());
 		closesocket(m_socket);
 		return NETLIB_INVALID_HANDLE;
 	}
