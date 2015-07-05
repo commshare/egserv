@@ -6,7 +6,7 @@ MESSAGE(STATUS "${CMAKE_SHARED_LIBRARY_LINK_C_FLAGS}")
 SET(LIBRARY_OUTPUT_PATH ${_})
 SET(EXECUTABLE_OUTPUT_PATH  ${_})
 
-ADD_DEFINITIONS(-gstabs+ -W -Wall -std=c++11)
+ADD_DEFINITIONS(-g -Wall -std=c++11 -Wno-deprecated -fdiagnostics-color=always)
 INCLUDE_DIRECTORIES(${_})
 LINK_DIRECTORIES(${_})
 
