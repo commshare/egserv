@@ -3,7 +3,9 @@ PROJECT(client_shell)
 SET(_ ${PROJECT_SOURCE_DIR})
 AUX_SOURCE_DIRECTORY(${_} SRC_LIST1)
 AUX_SOURCE_DIRECTORY(${_}/../util SRC_LIST2)
-AUX_SOURCE_DIRECTORY(${_}/../net/ SRC_LIST3)
+AUX_SOURCE_DIRECTORY(${_}/../net SRC_LIST3)
+AUX_SOURCE_DIRECTORY(${_}/../jsoncpp SRC_LIST4)
+#Do not add / behind util cuz there will be util//test.cpp 
 list(REMOVE_ITEM SRC_LIST2 ${_}/../util/test.cpp)
 #MESSAGE(STATUS "1....${SRC_LIST1}")
 #MESSAGE(STATUS "2....${SRC_LIST2}")
@@ -27,11 +29,11 @@ ADD_DEFINITIONS( -g -Wall -Wno-deprecated -Wno-unused-function -Wno-unused-varia
 #INCLUDE_DIRECTORIES(${_} ${_}/../base ${_}/../base/pb/protocol ${_}/../base/jsoncpp/ ${_}/../base/pb/)
 #LINK_DIRECTORIES(${_} ${_}/../base ${PB_LIB_DIR} ${_}/../base/slog/lib)
 
-INCLUDE_DIRECTORIES(${_} ${_}/../util/ ${_}/../net/ ${_}/../../base/pb/protocol/ ${_}/../../base/pb/)
+INCLUDE_DIRECTORIES(${_} ${_}/../util/ ${_}/../net/ ${_}/../jsoncpp/ ${_}/../../base/pb/protocol/ ${_}/../../base/pb/)
 LINK_DIRECTORIES(${_} ${_}/../lib ${PB_LIB_DIR})
 
 #ADD_XXXX必须在TARGET_LINK_LIBRARIES前面，否则会报错
 #ADD_LIBRARY(${PROJECTNAME} SHARED/STATIC ${SRC_LIST})
-ADD_EXECUTABLE(client_shell ${SRC_LIST1} ${SRC_LIST2} ${SRC_LIST3})
+ADD_EXECUTABLE(client_shell ${SRC_LIST1} ${SRC_LIST2} ${SRC_LIST3} ${SRC_LIST4})
 
 TARGET_LINK_LIBRARIES(client_shell protobuf-lite slog pthread curl ssl)

@@ -132,6 +132,102 @@ client_shell.cpp.s:
 	$(MAKE) -f CMakeFiles/client_shell.dir/build.make CMakeFiles/client_shell.dir/client_shell.cpp.s
 .PHONY : client_shell.cpp.s
 
+home/nary/egserv/src/mysub/jsoncpp/json_reader.o: home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.o
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_reader.o
+
+# target to build an object file
+home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.o:
+	$(MAKE) -f CMakeFiles/client_shell.dir/build.make CMakeFiles/client_shell.dir/home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.o
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.o
+
+home/nary/egserv/src/mysub/jsoncpp/json_reader.i: home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.i
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_reader.i
+
+# target to preprocess a source file
+home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.i:
+	$(MAKE) -f CMakeFiles/client_shell.dir/build.make CMakeFiles/client_shell.dir/home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.i
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.i
+
+home/nary/egserv/src/mysub/jsoncpp/json_reader.s: home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.s
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_reader.s
+
+# target to generate assembly for a file
+home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.s:
+	$(MAKE) -f CMakeFiles/client_shell.dir/build.make CMakeFiles/client_shell.dir/home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.s
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.s
+
+home/nary/egserv/src/mysub/jsoncpp/json_value.o: home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.o
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_value.o
+
+# target to build an object file
+home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.o:
+	$(MAKE) -f CMakeFiles/client_shell.dir/build.make CMakeFiles/client_shell.dir/home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.o
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.o
+
+home/nary/egserv/src/mysub/jsoncpp/json_value.i: home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.i
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_value.i
+
+# target to preprocess a source file
+home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.i:
+	$(MAKE) -f CMakeFiles/client_shell.dir/build.make CMakeFiles/client_shell.dir/home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.i
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.i
+
+home/nary/egserv/src/mysub/jsoncpp/json_value.s: home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.s
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_value.s
+
+# target to generate assembly for a file
+home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.s:
+	$(MAKE) -f CMakeFiles/client_shell.dir/build.make CMakeFiles/client_shell.dir/home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.s
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.s
+
+home/nary/egserv/src/mysub/jsoncpp/json_writer.o: home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.o
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_writer.o
+
+# target to build an object file
+home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.o:
+	$(MAKE) -f CMakeFiles/client_shell.dir/build.make CMakeFiles/client_shell.dir/home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.o
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.o
+
+home/nary/egserv/src/mysub/jsoncpp/json_writer.i: home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.i
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_writer.i
+
+# target to preprocess a source file
+home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.i:
+	$(MAKE) -f CMakeFiles/client_shell.dir/build.make CMakeFiles/client_shell.dir/home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.i
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.i
+
+home/nary/egserv/src/mysub/jsoncpp/json_writer.s: home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.s
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_writer.s
+
+# target to generate assembly for a file
+home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.s:
+	$(MAKE) -f CMakeFiles/client_shell.dir/build.make CMakeFiles/client_shell.dir/home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.s
+.PHONY : home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.s
+
+home/nary/egserv/src/mysub/net/HttpClient.o: home/nary/egserv/src/mysub/net/HttpClient.cpp.o
+.PHONY : home/nary/egserv/src/mysub/net/HttpClient.o
+
+# target to build an object file
+home/nary/egserv/src/mysub/net/HttpClient.cpp.o:
+	$(MAKE) -f CMakeFiles/client_shell.dir/build.make CMakeFiles/client_shell.dir/home/nary/egserv/src/mysub/net/HttpClient.cpp.o
+.PHONY : home/nary/egserv/src/mysub/net/HttpClient.cpp.o
+
+home/nary/egserv/src/mysub/net/HttpClient.i: home/nary/egserv/src/mysub/net/HttpClient.cpp.i
+.PHONY : home/nary/egserv/src/mysub/net/HttpClient.i
+
+# target to preprocess a source file
+home/nary/egserv/src/mysub/net/HttpClient.cpp.i:
+	$(MAKE) -f CMakeFiles/client_shell.dir/build.make CMakeFiles/client_shell.dir/home/nary/egserv/src/mysub/net/HttpClient.cpp.i
+.PHONY : home/nary/egserv/src/mysub/net/HttpClient.cpp.i
+
+home/nary/egserv/src/mysub/net/HttpClient.s: home/nary/egserv/src/mysub/net/HttpClient.cpp.s
+.PHONY : home/nary/egserv/src/mysub/net/HttpClient.s
+
+# target to generate assembly for a file
+home/nary/egserv/src/mysub/net/HttpClient.cpp.s:
+	$(MAKE) -f CMakeFiles/client_shell.dir/build.make CMakeFiles/client_shell.dir/home/nary/egserv/src/mysub/net/HttpClient.cpp.s
+.PHONY : home/nary/egserv/src/mysub/net/HttpClient.cpp.s
+
 home/nary/egserv/src/mysub/net/base_io_stream.o: home/nary/egserv/src/mysub/net/base_io_stream.cpp.o
 .PHONY : home/nary/egserv/src/mysub/net/base_io_stream.o
 
@@ -432,6 +528,18 @@ help:
 	@echo "... client_shell.o"
 	@echo "... client_shell.i"
 	@echo "... client_shell.s"
+	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_reader.o"
+	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_reader.i"
+	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_reader.s"
+	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_value.o"
+	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_value.i"
+	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_value.s"
+	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_writer.o"
+	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_writer.i"
+	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_writer.s"
+	@echo "... home/nary/egserv/src/mysub/net/HttpClient.o"
+	@echo "... home/nary/egserv/src/mysub/net/HttpClient.i"
+	@echo "... home/nary/egserv/src/mysub/net/HttpClient.s"
 	@echo "... home/nary/egserv/src/mysub/net/base_io_stream.o"
 	@echo "... home/nary/egserv/src/mysub/net/base_io_stream.i"
 	@echo "... home/nary/egserv/src/mysub/net/base_io_stream.s"

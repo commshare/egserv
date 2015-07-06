@@ -9,8 +9,8 @@
 #ifndef _BASE_HANDLER_HPP
 #define _BASE_HANDLER_HPP
 
-#include "../sigslot/sigslot.h"
-#include "../type/base_type.h"
+#include "sigslot.h"
+#include "base_type.h"
 #include "base_socket.hpp"
 #include <string>
 using namespace std;

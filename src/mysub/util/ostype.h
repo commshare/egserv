@@ -64,8 +64,11 @@
     typedef int	SOCKET;
     typedef int BOOL;
 #ifndef  __APPLE__
+#ifndef __my_fix_header_redefine__
+#define __my_fix_header_redefine__
     const int TRUE = 1;
     const int FALSE = 0;
+#endif
 #endif
     const int SOCKET_ERROR	= -1;
     const int INVALID_SOCKET = -1;

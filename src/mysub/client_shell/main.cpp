@@ -36,12 +36,15 @@ int main() {
     logi("start push server...\n");
     writePid();
     signal(SIGPIPE, SIG_IGN);
+    
     CEpollIOLoop* io = new CEpollIOLoop();
-    CClientShell* p = new CClientShell();
-    p->SetLoginServer("127.0.0.1:8080/msgserver");
-    p->SetIoloop(io);
-    p->Start();
     io->Start();
+    
+    CClientShell* p = new CClientShell();
+    p->SetClient(new CTCPClientAsync(io));
+    p->SetClientHandler(new CClientHandler());
+    p->Start();
+    
     while (true) {
         S_Sleep(1000);
     }

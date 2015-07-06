@@ -8,9 +8,35 @@
 
 #include "client_shell.h"
 
-CClientShell::CClientShell()
+void CClientHandler::OnException(uint32_t nsockid, int32_t nErrorCode)
 {
-	m_cmds_hist = vector<vector<string>*>();
+	
+}
+
+void CClientHandler::OnClose(uint32_t nsockid)
+{
+	
+}
+
+void CClientHandler::OnConnect(uint32_t nsockid)
+{
+	
+}
+
+void CClientHandler::OnRecvData(const char* szBuf, int32_t nBufSize)
+{
+	
+}
+
+
+void CClientShell::Start()
+{
+	m_client->DoConnect.connect(m_handler, &CClientHandler::OnConnect);
+    m_client->DoClose.connect(m_handler, &CClientHandler::OnClose);
+    m_client->DoException.connect(m_handler, &CClientHandler::OnException);
+    m_client->DoRecv.connect((CBaseHandler*)m_handler, &CClientHandler::OnRecv);
+    StartThread();
+
 }
 
 void CClientShell::DispatchCmd(vector<string>* cmds)
@@ -18,8 +44,47 @@ void CClientShell::DispatchCmd(vector<string>* cmds)
 	if(cmds->size() == 2 && (*cmds)[0] == "show" && 
 		(*cmds)[1] == "hist"){
 		PrintCmdsHist();
-	}
+	}else if(cmds->size() == 3 && (*cmds)[0] == "login"){
+        string username = (*cmds)[1];
+        string password = (*cmds)[2];
+        Login(username, password);
+    }
 	
+}
+
+void CClientShell::Login(string& username, string& password, string url)
+{
+	string resp;
+    CURLcode nRet = m_http_client.Get(url, resp);
+    if(nRet != CURLE_OK){
+        loge("login falied. access url:%s error\n", url.c_str());
+        return;
+    }
+    Json::Reader reader;
+    Json::Value value;
+    if(!reader.parse(resp, value))
+    {
+        loge("login falied. parse response error:%s\n", resp.c_str());
+        return;
+    }
+    string strPriorIp, strBackupIp;
+    uint16_t nPort;
+    try {
+        uint32_t nRet = value["code"].asUInt();
+        if(nRet != 0)
+        {
+            string strMsg = value["msg"].asString();
+            loge("login falied. errorMsg:%s\n", strMsg.c_str());
+            return;
+        }
+        strPriorIp = value["priorIP"].asString();
+        strBackupIp = value["backupIp"].asString();
+        nPort = value["port"].asUInt();
+    } catch (std::runtime_error msg) {
+        loge("login falied. get json error:%s\n", msg.what());
+        return;
+    }
+    logi("priorIP=%s, backIP=%s, port=%d", strPriorIp.c_str(), strBackupIp.c_str(), nPort);
 }
 
 void CClientShell::PrintCmdsHist()
@@ -37,24 +102,6 @@ void CClientShell::PrintCmdsHist()
 		cout << endl;
 	}
 
-}
-
-
-void CClientShell::SetLoginServer(string url)
-{
-    m_loginserver_url = url;
-}
-
-void CClientShell::SetIoloop(CEpollIOLoop* io)
-{
-	m_io = io;
-}
-
-
-void CClientShell::Start()
-{
-    StartThread();
-    
 }
 
 void CClientShell::OnThreadRun()

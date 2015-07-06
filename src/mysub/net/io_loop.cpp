@@ -80,9 +80,9 @@ void CIOLoop::Run()
 				FD_SET(it->first, &fd_error);
 			}
 		}
-		timeval tv;
-		tv.tv_sec = 1;
-		tv.tv_usec = 0;
+		// timeval tv;
+		// tv.tv_sec = 1;
+		// tv.tv_usec = 0;
 		int nRet = select(nMaxfd + 1, &fd_read, &fd_write, &fd_error, NULL);
 		if (nRet > 0)
 		{
