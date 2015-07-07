@@ -1,8 +1,4 @@
-
-#include <vector>
-#include <string>
-#include <iostream>
-#include <cstring>
+#include "ostype.h"
 #include "slog_api.h"
 
 extern CSLog g_iminfo;
@@ -18,11 +14,15 @@ extern CSLog g_imtrace;
 #define loge(fmt, args...) g_imerror.Error("<%s>|<%d>|<%s>," fmt, __FILENAME__, __LINE__, __FUNCTION__, ##args)
 #define logt(fmt, args...) g_imtrace.Trace("<%s>|<%d>|<%s>," fmt, __FILENAME__, __LINE__, __FUNCTION__, ##args)
 
-namespace util{
-
+namespace util {
 using namespace std;
-
+    
 void split(string s, vector<string>& ret);
 void split(string s, vector<string>& ret, char sep);
 
 }
+
+uint64_t get_tick_count();
+void util_sleep(uint32_t millisecond);
+
+

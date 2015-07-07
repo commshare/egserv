@@ -27,7 +27,7 @@ using namespace std;
 class CClientHandler : public CBaseHandler
 {
 public:
-    CClientHandler() {}
+    CClientHandler(CTCPClientAsync*);
     virtual ~CClientHandler() {}
     
     virtual void OnException(uint32_t nsockid, int32_t nErrorCode);
@@ -36,33 +36,33 @@ public:
     virtual void OnRecvData(const char* szBuf, int32_t nBufSize);
     
 private:
-    
+    CTCPClientAsync* _pTcpClient;
 };
 
 class CClientShell : public CThread, public CBaseHandler
 {
 
 public:
-    CClientShell() { m_cmds_hist = vector<vector<string>*>(); }
+    CClientShell() { _cmdsHist = vector<vector<string>*>(); }
     virtual ~CClientShell(){}
     
-    void SetClient(CTCPClientAsync* client) { m_client = client; }
-    void SetClientHandler(CClientHandler* handler) { m_handler = handler; }
+    void SetClient(CTCPClientAsync* client) { _pTcpClient = client; }
+    void SetClientHandler(CClientHandler* handler) { _pClientHandler = handler; }
     
     void Start();
     void DispatchCmd(vector<string>* cmds);
     void PrintCmdsHist();
     
-    void Login(string&, string&, string url="http://127.0.0.1:8080/msg_server");
+    void Login(string&, string&);
+    void ConnectServer();
     
     virtual void OnThreadRun();
 
 private:
-    vector<vector<string>*> m_cmds_hist;
-    CEpollIOLoop* m_io;
-    CTCPClientAsync* m_client;
-    CClientHandler* m_handler;
-    CHttpClient m_http_client;
+    vector<vector<string>*> _cmdsHist;
+    CTCPClientAsync* _pTcpClient;
+    CClientHandler* _pClientHandler;
+    CHttpClient _httpClient;
 
 };
 

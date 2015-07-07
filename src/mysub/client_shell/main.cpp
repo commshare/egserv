@@ -33,7 +33,7 @@ void writePid()
 
 int main() {
     // insert code here...
-    logi("start push server...\n");
+    logi("start push server...");
     writePid();
     signal(SIGPIPE, SIG_IGN);
     
@@ -41,8 +41,9 @@ int main() {
     io->Start();
     
     CClientShell* p = new CClientShell();
-    p->SetClient(new CTCPClientAsync(io));
-    p->SetClientHandler(new CClientHandler());
+    CTCPClientAsync* tcpclient = new CTCPClientAsync(io);
+    p->SetClient(tcpclient);
+    p->SetClientHandler(new CClientHandler(tcpclient));
     p->Start();
     
     while (true) {
