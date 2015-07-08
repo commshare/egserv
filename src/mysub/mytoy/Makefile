@@ -228,6 +228,30 @@ home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.s:
 	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.s
 .PHONY : home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.s
 
+home/nary/egserv/src/mysub/net/HttpClient.o: home/nary/egserv/src/mysub/net/HttpClient.cpp.o
+.PHONY : home/nary/egserv/src/mysub/net/HttpClient.o
+
+# target to build an object file
+home/nary/egserv/src/mysub/net/HttpClient.cpp.o:
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/net/HttpClient.cpp.o
+.PHONY : home/nary/egserv/src/mysub/net/HttpClient.cpp.o
+
+home/nary/egserv/src/mysub/net/HttpClient.i: home/nary/egserv/src/mysub/net/HttpClient.cpp.i
+.PHONY : home/nary/egserv/src/mysub/net/HttpClient.i
+
+# target to preprocess a source file
+home/nary/egserv/src/mysub/net/HttpClient.cpp.i:
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/net/HttpClient.cpp.i
+.PHONY : home/nary/egserv/src/mysub/net/HttpClient.cpp.i
+
+home/nary/egserv/src/mysub/net/HttpClient.s: home/nary/egserv/src/mysub/net/HttpClient.cpp.s
+.PHONY : home/nary/egserv/src/mysub/net/HttpClient.s
+
+# target to generate assembly for a file
+home/nary/egserv/src/mysub/net/HttpClient.cpp.s:
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/net/HttpClient.cpp.s
+.PHONY : home/nary/egserv/src/mysub/net/HttpClient.cpp.s
+
 home/nary/egserv/src/mysub/util/Lock.o: home/nary/egserv/src/mysub/util/Lock.cpp.o
 .PHONY : home/nary/egserv/src/mysub/util/Lock.o
 
@@ -300,30 +324,6 @@ home/nary/egserv/src/mysub/util/ThreadPool.cpp.s:
 	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/ThreadPool.cpp.s
 .PHONY : home/nary/egserv/src/mysub/util/ThreadPool.cpp.s
 
-home/nary/egserv/src/mysub/util/test.o: home/nary/egserv/src/mysub/util/test.cpp.o
-.PHONY : home/nary/egserv/src/mysub/util/test.o
-
-# target to build an object file
-home/nary/egserv/src/mysub/util/test.cpp.o:
-	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/test.cpp.o
-.PHONY : home/nary/egserv/src/mysub/util/test.cpp.o
-
-home/nary/egserv/src/mysub/util/test.i: home/nary/egserv/src/mysub/util/test.cpp.i
-.PHONY : home/nary/egserv/src/mysub/util/test.i
-
-# target to preprocess a source file
-home/nary/egserv/src/mysub/util/test.cpp.i:
-	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/test.cpp.i
-.PHONY : home/nary/egserv/src/mysub/util/test.cpp.i
-
-home/nary/egserv/src/mysub/util/test.s: home/nary/egserv/src/mysub/util/test.cpp.s
-.PHONY : home/nary/egserv/src/mysub/util/test.s
-
-# target to generate assembly for a file
-home/nary/egserv/src/mysub/util/test.cpp.s:
-	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/test.cpp.s
-.PHONY : home/nary/egserv/src/mysub/util/test.cpp.s
-
 home/nary/egserv/src/mysub/util/util.o: home/nary/egserv/src/mysub/util/util.cpp.o
 .PHONY : home/nary/egserv/src/mysub/util/util.o
 
@@ -372,6 +372,9 @@ help:
 	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_writer.o"
 	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_writer.i"
 	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_writer.s"
+	@echo "... home/nary/egserv/src/mysub/net/HttpClient.o"
+	@echo "... home/nary/egserv/src/mysub/net/HttpClient.i"
+	@echo "... home/nary/egserv/src/mysub/net/HttpClient.s"
 	@echo "... home/nary/egserv/src/mysub/util/Lock.o"
 	@echo "... home/nary/egserv/src/mysub/util/Lock.i"
 	@echo "... home/nary/egserv/src/mysub/util/Lock.s"
@@ -381,9 +384,6 @@ help:
 	@echo "... home/nary/egserv/src/mysub/util/ThreadPool.o"
 	@echo "... home/nary/egserv/src/mysub/util/ThreadPool.i"
 	@echo "... home/nary/egserv/src/mysub/util/ThreadPool.s"
-	@echo "... home/nary/egserv/src/mysub/util/test.o"
-	@echo "... home/nary/egserv/src/mysub/util/test.i"
-	@echo "... home/nary/egserv/src/mysub/util/test.s"
 	@echo "... home/nary/egserv/src/mysub/util/util.o"
 	@echo "... home/nary/egserv/src/mysub/util/util.i"
 	@echo "... home/nary/egserv/src/mysub/util/util.s"

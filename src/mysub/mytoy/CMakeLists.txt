@@ -3,11 +3,11 @@ PROJECT(eg_toy)
 SET(_ ${PROJECT_SOURCE_DIR})
 AUX_SOURCE_DIRECTORY(${_} SRC_LIST1)
 AUX_SOURCE_DIRECTORY(${_}/../util SRC_LIST2)
-#AUX_SOURCE_DIRECTORY(${_}/../net SRC_LIST3)
+AUX_SOURCE_DIRECTORY(${_}/../net SRC_LIST3)
 AUX_SOURCE_DIRECTORY(${_}/../jsoncpp SRC_LIST4)
 #AUX_SOURCE_DIRECTORY(${_}/../net/c_netlib SRC_LIST5)
 #Do not add / behind util cuz there will be util//test.cpp 
-#list(REMOVE_ITEM SRC_LIST2 ${_}/../util/test.cpp)
+list(REMOVE_ITEM SRC_LIST2 ${_}/../util/test.cpp)
 #MESSAGE(STATUS "1....${SRC_LIST1}")
 #MESSAGE(STATUS "2....${SRC_LIST2}")
 #MESSAGE(STATUS "3....${SRC_LIST3}")
@@ -35,6 +35,6 @@ LINK_DIRECTORIES(${_} ${_}/../lib ${PB_LIB_DIR})
 
 #ADD_XXXX必须在TARGET_LINK_LIBRARIES前面，否则会报错
 #ADD_LIBRARY(${PROJECTNAME} SHARED/STATIC ${SRC_LIST})
-ADD_EXECUTABLE(eg_toy ${SRC_LIST1} ${SRC_LIST2} ${SRC_LIST4})
+ADD_EXECUTABLE(eg_toy ${SRC_LIST1} ${SRC_LIST2} ${SRC_LIST3} ${SRC_LIST4})
 
 TARGET_LINK_LIBRARIES(eg_toy protobuf-lite slog pthread curl ssl)

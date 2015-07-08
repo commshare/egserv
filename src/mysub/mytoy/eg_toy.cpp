@@ -4,62 +4,56 @@
 
 #include "egio.h"
 
+typedef struct {
+    string priorIp;
+    string backupIp;
+    uint16_t port;
+} msg_server_url_t;
+
+static void get_msg_server_url(string login_url, msg_server_url_t* msg_url) {
+	string resp;
+	CHttpClient ht;
+
+    CURLcode nRet = ht.Get(login_url, resp);
+    if(nRet != CURLE_OK){
+        loge("login falied. access url:%s error\n", login_url.c_str());
+        return;
+    }
+    
+    Json::Reader reader;
+    Json::Value value;
+    if(!reader.parse(resp, value))
+    {
+        loge("login falied. parse response error:%s\n", resp.c_str());
+        return;
+    }
+
+    uint32_t code = value["code"].asUInt();
+    if(code != 0)
+    {
+        string strMsg = value["msg"].asString();
+        loge("login falied. errorMsg:%s\n", strMsg.c_str());
+        return;
+    }
+    msg_url->priorIp = value["priorIP"].asString();
+    msg_url->backupIp = value["backupIp"].asString();
+    msg_url->port = value["port"].asUInt();
+
+    logi("priorIP=%s, backIP=%s, port=%d", 
+        msg_url->priorIp.c_str(), msg_url->backupIp.c_str(), msg_url->port);
+}
+
 
 class ClientConn : public EgConn
 {
-    string _msg_prior_ip;
-    string _msg_backup_ip;
-    uint16_t _port;
-    string _login_url;
+
 public:
 
-    ClientConn(string loginUrl) : _login_url(loginUrl) {
-        _GetMsgServer();
-    }
-
-    virtual void OnConfirm() () {
-        logi("connect to %s:%d success!", _ip.c_str(), _port);
+    virtual void OnConfirm()  {
+        logi("connect to %s:%d success!", _peer_ip.c_str(), _peer_port);
     }
     
-    virtual const char* GetConnIp() {
-        return _msg_backup_ip.c_str();
-    }
-    
-    virtual uint16_t GetConnPort() {
-        return _port;
-    }
-    
-    void _GetMsgServer() {
-    	string resp;
-    	CHttpClient ht;
 
-        CURLcode nRet = ht.Get(_login_url, resp);
-        if(nRet != CURLE_OK){
-            loge("login falied. access url:%s error\n", url.c_str());
-            return;
-        }
-        
-        Json::Reader reader;
-        Json::Value value;
-        if(!reader.parse(resp, value))
-        {
-            loge("login falied. parse response error:%s\n", resp.c_str());
-            return;
-        }
-
-        uint32_t nRet = value["code"].asUInt();
-        if(nRet != 0)
-        {
-            string strMsg = value["msg"].asString();
-            loge("login falied. errorMsg:%s\n", strMsg.c_str());
-            return;
-        }
-        _msg_prior_ip = value["priorIP"].asString();
-        _msg_backup_ip = value["backupIp"].asString();
-        _port = value["port"].asUInt();
-
-        logi("priorIP=%s, backIP=%s, port=%d", strPriorIp.c_str(), strBackupIp.c_str(), nPort);
-    }
 };
 
 int main(int argc, char* argv[])
@@ -71,11 +65,11 @@ int main(int argc, char* argv[])
 	
 	string ip;
 	uint16_t port;
-	
-	get_msg_server(ip, port);
-	logi("ip=%s, port=%d", ip.c_str(), port);
-	ToyConn* toyconn = new ToyConn("http://127.0.0.1:8080/msg_server");
-	g_egio->Connect(toyconn);
+    msg_server_url_t url;
+    get_msg_server_url("http://127.0.0.1:8080/msg_server", &url);
+	logi("ip=%s, port=%d", url.priorIp.c_str(), url.port);
+	ClientConn* clientConn = new ClientConn();
+	g_egio->Connect(url.priorIp.c_str(), url.port, clientConn);
 	g_egio->StartLoop();
 	
 	return 0;

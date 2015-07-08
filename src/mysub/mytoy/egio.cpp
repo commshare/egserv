@@ -1,11 +1,21 @@
 
 #include "eg_common.h"
+#include "egio.h"
 #include "util.h"
 
 Egio* Egio::Instance()
 {
 	static Egio egio;
 	return &egio;
+}
+
+Egio::Egio()
+{
+	_epfd = epoll_create(1024);
+	if (_epfd == -1) {
+		loge("epoll_create failed");
+		throw EgException("epoll_create failed");
+	}
 }
 
 int Egio::SetAddr(const char* ip, const uint16_t port, sockaddr_in* pAddr)
@@ -24,7 +34,7 @@ int Egio::SetAddr(const char* ip, const uint16_t port, sockaddr_in* pAddr)
 	}
 }
 
-int Egio::Connect(EgConn* conn)
+int Egio::Connect(const char* ip, uint16_t port, EgConn* conn)
 {
 	int sock = socket(AF_INET, SOCK_STREAM, 0);
 	if (sock == INVALID_SOCKET) {
@@ -32,28 +42,30 @@ int Egio::Connect(EgConn* conn)
 		throw EgException("socket create failed");
 	}
 	//set nonblock
-	if (fcntl(sock, F_SETFL, O_NONBLOCK | fcntl(fd, F_GETFL)) == SOCKET_ERROR) {
-		log("set nonblock failed, err_code=%d", errno);
+	if (fcntl(sock, F_SETFL, O_NONBLOCK | fcntl(sock, F_GETFL)) == SOCKET_ERROR) {
+		loge("set nonblock failed, err_code=%d", errno);
 		throw EgException("set nonblock failed");
 	}
 	//set nodelay
 	int nodelay = 1;
-	if (setsockopt(fd, IPPROTO_TCP, TCP_NODELAY, (char*)&nodelay, sizeof(nodelay)) == SOCKET_ERROR) {
-		log("set nodelay failed, err_code=%d", errno);
+	if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, (char*)&nodelay, sizeof(nodelay)) == SOCKET_ERROR) {
+		loge("set nodelay failed, err_code=%d", errno);
 		throw EgException("set nodelay failed");
 	}
 	
 	sockaddr_in serv_addr;
-	SetAddr(conn->GetConnIp(), conn->GetConnPort(), &serv_addr);
+	SetAddr(ip, port,  &serv_addr);
 	if (connect(sock, (sockaddr*)&serv_addr, sizeof(serv_addr)) == SOCKET_ERROR) {
 		if (!(errno == EINPROGRESS) || (errno == EWOULDBLOCK)) {
-			loge("connect failed, err_code=%d", _GetErrorCode());
+			loge("connect failed, err_code=%d", errno);
 			close(sock);
 			throw EgException("connect failed");
 		}
 	}
 	
 	conn->SetState(EGIO_STATE_CONNECTING);
+	conn->SetPeerIp(ip);
+	conn->SetPeerPort(port);
 	_conn_map[sock] = conn;
 	
 	AddEvent(sock);
@@ -81,8 +93,7 @@ void Egio::RemoveEvent(int fd)
 
 void Egio::OnWrite(int fd)
 {
-	EgConn conn;
-
+	EgConn* conn;
 	auto it = _conn_map.find(fd);
 	if (it != _conn_map.end()) {
 		conn = it->second;
@@ -158,6 +169,3 @@ void Egio::StartLoop()
 	}
 }
 
-
-
-}
