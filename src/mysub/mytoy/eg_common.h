@@ -18,12 +18,14 @@
 #include <signal.h>
 #include <unistd.h>
 #include <string.h>
+#include <stdarg.h>
 
 #include <string>
 #include <list>
 #include <vector>
 #include <iostream>
 #include <map>
+#include <memory>
 
 
 #endif

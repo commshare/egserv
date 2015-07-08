@@ -13,11 +13,19 @@ typedef enum {
 	EGIO_STATE_CLOSING
 } eg_conn_state_t;
 
+#define egex(fmt, args...)  EgException("<%s>|<%d>|<%s>," fmt, __FILENAME__, __LINE__, __FUNCTION__, ##args)
 class EgException : public std::exception
 {
 	std::string _why;
 public:
-	EgException(const char* why) : _why(why) {}
+	EgException(const char* why, ...) {
+	    va_list args;
+	    va_start(args, why);
+	    char szBuffer[4096];
+	    vsnprintf(szBuffer, sizeof(szBuffer), why, args);
+	    va_end(args);
+	    _why = szBuffer;
+	}
 	virtual const char* what() const throw() {
 		return _why.c_str();
 	}
@@ -53,14 +61,14 @@ public:
 class Egio {
 
 	bool _loop_running;
-	std::map<int, EgConn*> _conn_map;
+	std::map<int, std::shared_ptr<EgConn> > _conn_map;
 	int _epfd;
 
 public:
 	Egio();
 	virtual ~Egio() {}
 	int Connect(const char* ip, uint16_t port, EgConn* conn);
-	int SetAddr(const char* ip, const uint16_t port, sockaddr_in* pAddr);
+	void SetAddr(const char* ip, const uint16_t port, sockaddr_in* pAddr);
 	void AddEvent(int fd);
 	void RemoveEvent(int fd);
 	void OnWrite(int fd);

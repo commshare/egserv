@@ -53,6 +53,9 @@ public:
         logi("connect to %s:%d success!", _peer_ip.c_str(), _peer_port);
     }
     
+    virtual void OnClose() {
+        logi("close connection %s:%d !", _peer_ip.c_str(), _peer_port);
+    }
 
 };
 

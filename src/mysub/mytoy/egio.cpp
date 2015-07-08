@@ -13,12 +13,11 @@ Egio::Egio()
 {
 	_epfd = epoll_create(1024);
 	if (_epfd == -1) {
-		loge("epoll_create failed");
-		throw EgException("epoll_create failed");
+		throw egex("epoll_create failed");
 	}
 }
 
-int Egio::SetAddr(const char* ip, const uint16_t port, sockaddr_in* pAddr)
+void Egio::SetAddr(const char* ip, const uint16_t port, sockaddr_in* pAddr)
 {
 	memset(pAddr, 0, sizeof(sockaddr_in));
 	pAddr->sin_family = AF_INET;
@@ -27,8 +26,7 @@ int Egio::SetAddr(const char* ip, const uint16_t port, sockaddr_in* pAddr)
 	if (pAddr->sin_addr.s_addr == INADDR_NONE) {
 		hostent* host = gethostbyname(ip);
 		if (host == NULL) {
-			loge("gethostbyname failed, ip=%s", ip);
-			return INADDR_NONE;
+			throw egex("gethostbyname failed, ip=%s", ip);
 		}
 		pAddr->sin_addr.s_addr = *(uint32_t*)host->h_addr;
 	}
@@ -39,18 +37,18 @@ int Egio::Connect(const char* ip, uint16_t port, EgConn* conn)
 	int sock = socket(AF_INET, SOCK_STREAM, 0);
 	if (sock == INVALID_SOCKET) {
 		loge("socket failed, err_code=%d", errno);
-		throw EgException("socket create failed");
+		throw egex("socket create failed, errno=%d", errno);
 	}
 	//set nonblock
 	if (fcntl(sock, F_SETFL, O_NONBLOCK | fcntl(sock, F_GETFL)) == SOCKET_ERROR) {
 		loge("set nonblock failed, err_code=%d", errno);
-		throw EgException("set nonblock failed");
+		throw egex("set nonblock failed, errno=%d", errno);
 	}
 	//set nodelay
 	int nodelay = 1;
 	if (setsockopt(sock, IPPROTO_TCP, TCP_NODELAY, (char*)&nodelay, sizeof(nodelay)) == SOCKET_ERROR) {
 		loge("set nodelay failed, err_code=%d", errno);
-		throw EgException("set nodelay failed");
+		throw egex("set nodelay failed, errno=%d", errno);
 	}
 	
 	sockaddr_in serv_addr;
@@ -59,14 +57,14 @@ int Egio::Connect(const char* ip, uint16_t port, EgConn* conn)
 		if (!(errno == EINPROGRESS) || (errno == EWOULDBLOCK)) {
 			loge("connect failed, err_code=%d", errno);
 			close(sock);
-			throw EgException("connect failed");
+			throw egex("connect failed, errno=%d", errno);
 		}
 	}
 	
 	conn->SetState(EGIO_STATE_CONNECTING);
 	conn->SetPeerIp(ip);
 	conn->SetPeerPort(port);
-	_conn_map[sock] = conn;
+	_conn_map[sock] = std::shared_ptr<EgConn>(conn);
 	
 	AddEvent(sock);
 	
@@ -93,13 +91,13 @@ void Egio::RemoveEvent(int fd)
 
 void Egio::OnWrite(int fd)
 {
-	EgConn* conn;
+	std::shared_ptr<EgConn> conn;
 	auto it = _conn_map.find(fd);
 	if (it != _conn_map.end()) {
 		conn = it->second;
 	} else {
 		loge("_conn_map find fd=%d failed ", fd);
-		throw EgException("_conn_map find failed");
+		throw egex("_conn_map find fd=%d failed", fd);
 	}
 	
 	if (conn->GetState() == EGIO_STATE_CONNECTING) {
@@ -112,12 +110,17 @@ void Egio::OnWrite(int fd)
 
 void Egio::OnClose(int fd)
 {
-	
+	_conn_map[fd]->OnClose();
+	_conn_map.erase(fd);
+	close(fd);
 }
 
 void Egio::OnRead(int fd)
 {
-	
+	uint64_t avail;
+	if ((ioctl(fd, FIONREAD, &avail) == SOCKET_ERROR) || (avail == 0)) {
+		OnClose(fd);
+	}
 }
 
 void Egio::StartLoop()
