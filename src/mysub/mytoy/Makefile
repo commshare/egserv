@@ -96,24 +96,72 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named mytoy
+# Target rules for targets named eg_toy
 
 # Build rule for target.
-mytoy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mytoy
-.PHONY : mytoy
+eg_toy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 eg_toy
+.PHONY : eg_toy
 
 # fast build rule for target.
-mytoy/fast:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/build
-.PHONY : mytoy/fast
+eg_toy/fast:
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/build
+.PHONY : eg_toy/fast
+
+eg_toy.o: eg_toy.cpp.o
+.PHONY : eg_toy.o
+
+# target to build an object file
+eg_toy.cpp.o:
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/eg_toy.cpp.o
+.PHONY : eg_toy.cpp.o
+
+eg_toy.i: eg_toy.cpp.i
+.PHONY : eg_toy.i
+
+# target to preprocess a source file
+eg_toy.cpp.i:
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/eg_toy.cpp.i
+.PHONY : eg_toy.cpp.i
+
+eg_toy.s: eg_toy.cpp.s
+.PHONY : eg_toy.s
+
+# target to generate assembly for a file
+eg_toy.cpp.s:
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/eg_toy.cpp.s
+.PHONY : eg_toy.cpp.s
+
+egio.o: egio.cpp.o
+.PHONY : egio.o
+
+# target to build an object file
+egio.cpp.o:
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/egio.cpp.o
+.PHONY : egio.cpp.o
+
+egio.i: egio.cpp.i
+.PHONY : egio.i
+
+# target to preprocess a source file
+egio.cpp.i:
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/egio.cpp.i
+.PHONY : egio.cpp.i
+
+egio.s: egio.cpp.s
+.PHONY : egio.s
+
+# target to generate assembly for a file
+egio.cpp.s:
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/egio.cpp.s
+.PHONY : egio.cpp.s
 
 home/nary/egserv/src/mysub/jsoncpp/json_reader.o: home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.o
 .PHONY : home/nary/egserv/src/mysub/jsoncpp/json_reader.o
 
 # target to build an object file
 home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.o:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.o
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.o
 .PHONY : home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.o
 
 home/nary/egserv/src/mysub/jsoncpp/json_reader.i: home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.i
@@ -121,7 +169,7 @@ home/nary/egserv/src/mysub/jsoncpp/json_reader.i: home/nary/egserv/src/mysub/jso
 
 # target to preprocess a source file
 home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.i:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.i
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.i
 .PHONY : home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.i
 
 home/nary/egserv/src/mysub/jsoncpp/json_reader.s: home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.s
@@ -129,7 +177,7 @@ home/nary/egserv/src/mysub/jsoncpp/json_reader.s: home/nary/egserv/src/mysub/jso
 
 # target to generate assembly for a file
 home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.s:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.s
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.s
 .PHONY : home/nary/egserv/src/mysub/jsoncpp/json_reader.cpp.s
 
 home/nary/egserv/src/mysub/jsoncpp/json_value.o: home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.o
@@ -137,7 +185,7 @@ home/nary/egserv/src/mysub/jsoncpp/json_value.o: home/nary/egserv/src/mysub/json
 
 # target to build an object file
 home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.o:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.o
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.o
 .PHONY : home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.o
 
 home/nary/egserv/src/mysub/jsoncpp/json_value.i: home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.i
@@ -145,7 +193,7 @@ home/nary/egserv/src/mysub/jsoncpp/json_value.i: home/nary/egserv/src/mysub/json
 
 # target to preprocess a source file
 home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.i:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.i
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.i
 .PHONY : home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.i
 
 home/nary/egserv/src/mysub/jsoncpp/json_value.s: home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.s
@@ -153,7 +201,7 @@ home/nary/egserv/src/mysub/jsoncpp/json_value.s: home/nary/egserv/src/mysub/json
 
 # target to generate assembly for a file
 home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.s:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.s
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.s
 .PHONY : home/nary/egserv/src/mysub/jsoncpp/json_value.cpp.s
 
 home/nary/egserv/src/mysub/jsoncpp/json_writer.o: home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.o
@@ -161,7 +209,7 @@ home/nary/egserv/src/mysub/jsoncpp/json_writer.o: home/nary/egserv/src/mysub/jso
 
 # target to build an object file
 home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.o:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.o
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.o
 .PHONY : home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.o
 
 home/nary/egserv/src/mysub/jsoncpp/json_writer.i: home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.i
@@ -169,7 +217,7 @@ home/nary/egserv/src/mysub/jsoncpp/json_writer.i: home/nary/egserv/src/mysub/jso
 
 # target to preprocess a source file
 home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.i:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.i
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.i
 .PHONY : home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.i
 
 home/nary/egserv/src/mysub/jsoncpp/json_writer.s: home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.s
@@ -177,135 +225,15 @@ home/nary/egserv/src/mysub/jsoncpp/json_writer.s: home/nary/egserv/src/mysub/jso
 
 # target to generate assembly for a file
 home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.s:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.s
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.s
 .PHONY : home/nary/egserv/src/mysub/jsoncpp/json_writer.cpp.s
-
-home/nary/egserv/src/mysub/net/HttpClient.o: home/nary/egserv/src/mysub/net/HttpClient.cpp.o
-.PHONY : home/nary/egserv/src/mysub/net/HttpClient.o
-
-# target to build an object file
-home/nary/egserv/src/mysub/net/HttpClient.cpp.o:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/HttpClient.cpp.o
-.PHONY : home/nary/egserv/src/mysub/net/HttpClient.cpp.o
-
-home/nary/egserv/src/mysub/net/HttpClient.i: home/nary/egserv/src/mysub/net/HttpClient.cpp.i
-.PHONY : home/nary/egserv/src/mysub/net/HttpClient.i
-
-# target to preprocess a source file
-home/nary/egserv/src/mysub/net/HttpClient.cpp.i:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/HttpClient.cpp.i
-.PHONY : home/nary/egserv/src/mysub/net/HttpClient.cpp.i
-
-home/nary/egserv/src/mysub/net/HttpClient.s: home/nary/egserv/src/mysub/net/HttpClient.cpp.s
-.PHONY : home/nary/egserv/src/mysub/net/HttpClient.s
-
-# target to generate assembly for a file
-home/nary/egserv/src/mysub/net/HttpClient.cpp.s:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/HttpClient.cpp.s
-.PHONY : home/nary/egserv/src/mysub/net/HttpClient.cpp.s
-
-home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.o: home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.cpp.o
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.o
-
-# target to build an object file
-home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.cpp.o:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.cpp.o
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.cpp.o
-
-home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.i: home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.cpp.i
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.i
-
-# target to preprocess a source file
-home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.cpp.i:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.cpp.i
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.cpp.i
-
-home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.s: home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.cpp.s
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.s
-
-# target to generate assembly for a file
-home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.cpp.s:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.cpp.s
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.cpp.s
-
-home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.o: home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.cpp.o
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.o
-
-# target to build an object file
-home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.cpp.o:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.cpp.o
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.cpp.o
-
-home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.i: home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.cpp.i
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.i
-
-# target to preprocess a source file
-home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.cpp.i:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.cpp.i
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.cpp.i
-
-home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.s: home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.cpp.s
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.s
-
-# target to generate assembly for a file
-home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.cpp.s:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.cpp.s
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.cpp.s
-
-home/nary/egserv/src/mysub/net/c_netlib/RefObject.o: home/nary/egserv/src/mysub/net/c_netlib/RefObject.cpp.o
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/RefObject.o
-
-# target to build an object file
-home/nary/egserv/src/mysub/net/c_netlib/RefObject.cpp.o:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/c_netlib/RefObject.cpp.o
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/RefObject.cpp.o
-
-home/nary/egserv/src/mysub/net/c_netlib/RefObject.i: home/nary/egserv/src/mysub/net/c_netlib/RefObject.cpp.i
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/RefObject.i
-
-# target to preprocess a source file
-home/nary/egserv/src/mysub/net/c_netlib/RefObject.cpp.i:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/c_netlib/RefObject.cpp.i
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/RefObject.cpp.i
-
-home/nary/egserv/src/mysub/net/c_netlib/RefObject.s: home/nary/egserv/src/mysub/net/c_netlib/RefObject.cpp.s
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/RefObject.s
-
-# target to generate assembly for a file
-home/nary/egserv/src/mysub/net/c_netlib/RefObject.cpp.s:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/c_netlib/RefObject.cpp.s
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/RefObject.cpp.s
-
-home/nary/egserv/src/mysub/net/c_netlib/netlib.o: home/nary/egserv/src/mysub/net/c_netlib/netlib.cpp.o
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/netlib.o
-
-# target to build an object file
-home/nary/egserv/src/mysub/net/c_netlib/netlib.cpp.o:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/c_netlib/netlib.cpp.o
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/netlib.cpp.o
-
-home/nary/egserv/src/mysub/net/c_netlib/netlib.i: home/nary/egserv/src/mysub/net/c_netlib/netlib.cpp.i
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/netlib.i
-
-# target to preprocess a source file
-home/nary/egserv/src/mysub/net/c_netlib/netlib.cpp.i:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/c_netlib/netlib.cpp.i
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/netlib.cpp.i
-
-home/nary/egserv/src/mysub/net/c_netlib/netlib.s: home/nary/egserv/src/mysub/net/c_netlib/netlib.cpp.s
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/netlib.s
-
-# target to generate assembly for a file
-home/nary/egserv/src/mysub/net/c_netlib/netlib.cpp.s:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/net/c_netlib/netlib.cpp.s
-.PHONY : home/nary/egserv/src/mysub/net/c_netlib/netlib.cpp.s
 
 home/nary/egserv/src/mysub/util/Lock.o: home/nary/egserv/src/mysub/util/Lock.cpp.o
 .PHONY : home/nary/egserv/src/mysub/util/Lock.o
 
 # target to build an object file
 home/nary/egserv/src/mysub/util/Lock.cpp.o:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/util/Lock.cpp.o
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/Lock.cpp.o
 .PHONY : home/nary/egserv/src/mysub/util/Lock.cpp.o
 
 home/nary/egserv/src/mysub/util/Lock.i: home/nary/egserv/src/mysub/util/Lock.cpp.i
@@ -313,7 +241,7 @@ home/nary/egserv/src/mysub/util/Lock.i: home/nary/egserv/src/mysub/util/Lock.cpp
 
 # target to preprocess a source file
 home/nary/egserv/src/mysub/util/Lock.cpp.i:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/util/Lock.cpp.i
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/Lock.cpp.i
 .PHONY : home/nary/egserv/src/mysub/util/Lock.cpp.i
 
 home/nary/egserv/src/mysub/util/Lock.s: home/nary/egserv/src/mysub/util/Lock.cpp.s
@@ -321,7 +249,7 @@ home/nary/egserv/src/mysub/util/Lock.s: home/nary/egserv/src/mysub/util/Lock.cpp
 
 # target to generate assembly for a file
 home/nary/egserv/src/mysub/util/Lock.cpp.s:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/util/Lock.cpp.s
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/Lock.cpp.s
 .PHONY : home/nary/egserv/src/mysub/util/Lock.cpp.s
 
 home/nary/egserv/src/mysub/util/Thread.o: home/nary/egserv/src/mysub/util/Thread.cpp.o
@@ -329,7 +257,7 @@ home/nary/egserv/src/mysub/util/Thread.o: home/nary/egserv/src/mysub/util/Thread
 
 # target to build an object file
 home/nary/egserv/src/mysub/util/Thread.cpp.o:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/util/Thread.cpp.o
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/Thread.cpp.o
 .PHONY : home/nary/egserv/src/mysub/util/Thread.cpp.o
 
 home/nary/egserv/src/mysub/util/Thread.i: home/nary/egserv/src/mysub/util/Thread.cpp.i
@@ -337,7 +265,7 @@ home/nary/egserv/src/mysub/util/Thread.i: home/nary/egserv/src/mysub/util/Thread
 
 # target to preprocess a source file
 home/nary/egserv/src/mysub/util/Thread.cpp.i:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/util/Thread.cpp.i
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/Thread.cpp.i
 .PHONY : home/nary/egserv/src/mysub/util/Thread.cpp.i
 
 home/nary/egserv/src/mysub/util/Thread.s: home/nary/egserv/src/mysub/util/Thread.cpp.s
@@ -345,7 +273,7 @@ home/nary/egserv/src/mysub/util/Thread.s: home/nary/egserv/src/mysub/util/Thread
 
 # target to generate assembly for a file
 home/nary/egserv/src/mysub/util/Thread.cpp.s:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/util/Thread.cpp.s
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/Thread.cpp.s
 .PHONY : home/nary/egserv/src/mysub/util/Thread.cpp.s
 
 home/nary/egserv/src/mysub/util/ThreadPool.o: home/nary/egserv/src/mysub/util/ThreadPool.cpp.o
@@ -353,7 +281,7 @@ home/nary/egserv/src/mysub/util/ThreadPool.o: home/nary/egserv/src/mysub/util/Th
 
 # target to build an object file
 home/nary/egserv/src/mysub/util/ThreadPool.cpp.o:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/util/ThreadPool.cpp.o
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/ThreadPool.cpp.o
 .PHONY : home/nary/egserv/src/mysub/util/ThreadPool.cpp.o
 
 home/nary/egserv/src/mysub/util/ThreadPool.i: home/nary/egserv/src/mysub/util/ThreadPool.cpp.i
@@ -361,7 +289,7 @@ home/nary/egserv/src/mysub/util/ThreadPool.i: home/nary/egserv/src/mysub/util/Th
 
 # target to preprocess a source file
 home/nary/egserv/src/mysub/util/ThreadPool.cpp.i:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/util/ThreadPool.cpp.i
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/ThreadPool.cpp.i
 .PHONY : home/nary/egserv/src/mysub/util/ThreadPool.cpp.i
 
 home/nary/egserv/src/mysub/util/ThreadPool.s: home/nary/egserv/src/mysub/util/ThreadPool.cpp.s
@@ -369,15 +297,39 @@ home/nary/egserv/src/mysub/util/ThreadPool.s: home/nary/egserv/src/mysub/util/Th
 
 # target to generate assembly for a file
 home/nary/egserv/src/mysub/util/ThreadPool.cpp.s:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/util/ThreadPool.cpp.s
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/ThreadPool.cpp.s
 .PHONY : home/nary/egserv/src/mysub/util/ThreadPool.cpp.s
+
+home/nary/egserv/src/mysub/util/test.o: home/nary/egserv/src/mysub/util/test.cpp.o
+.PHONY : home/nary/egserv/src/mysub/util/test.o
+
+# target to build an object file
+home/nary/egserv/src/mysub/util/test.cpp.o:
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/test.cpp.o
+.PHONY : home/nary/egserv/src/mysub/util/test.cpp.o
+
+home/nary/egserv/src/mysub/util/test.i: home/nary/egserv/src/mysub/util/test.cpp.i
+.PHONY : home/nary/egserv/src/mysub/util/test.i
+
+# target to preprocess a source file
+home/nary/egserv/src/mysub/util/test.cpp.i:
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/test.cpp.i
+.PHONY : home/nary/egserv/src/mysub/util/test.cpp.i
+
+home/nary/egserv/src/mysub/util/test.s: home/nary/egserv/src/mysub/util/test.cpp.s
+.PHONY : home/nary/egserv/src/mysub/util/test.s
+
+# target to generate assembly for a file
+home/nary/egserv/src/mysub/util/test.cpp.s:
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/test.cpp.s
+.PHONY : home/nary/egserv/src/mysub/util/test.cpp.s
 
 home/nary/egserv/src/mysub/util/util.o: home/nary/egserv/src/mysub/util/util.cpp.o
 .PHONY : home/nary/egserv/src/mysub/util/util.o
 
 # target to build an object file
 home/nary/egserv/src/mysub/util/util.cpp.o:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/util/util.cpp.o
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/util.cpp.o
 .PHONY : home/nary/egserv/src/mysub/util/util.cpp.o
 
 home/nary/egserv/src/mysub/util/util.i: home/nary/egserv/src/mysub/util/util.cpp.i
@@ -385,7 +337,7 @@ home/nary/egserv/src/mysub/util/util.i: home/nary/egserv/src/mysub/util/util.cpp
 
 # target to preprocess a source file
 home/nary/egserv/src/mysub/util/util.cpp.i:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/util/util.cpp.i
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/util.cpp.i
 .PHONY : home/nary/egserv/src/mysub/util/util.cpp.i
 
 home/nary/egserv/src/mysub/util/util.s: home/nary/egserv/src/mysub/util/util.cpp.s
@@ -393,32 +345,8 @@ home/nary/egserv/src/mysub/util/util.s: home/nary/egserv/src/mysub/util/util.cpp
 
 # target to generate assembly for a file
 home/nary/egserv/src/mysub/util/util.cpp.s:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/home/nary/egserv/src/mysub/util/util.cpp.s
+	$(MAKE) -f CMakeFiles/eg_toy.dir/build.make CMakeFiles/eg_toy.dir/home/nary/egserv/src/mysub/util/util.cpp.s
 .PHONY : home/nary/egserv/src/mysub/util/util.cpp.s
-
-mytoy.o: mytoy.cpp.o
-.PHONY : mytoy.o
-
-# target to build an object file
-mytoy.cpp.o:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/mytoy.cpp.o
-.PHONY : mytoy.cpp.o
-
-mytoy.i: mytoy.cpp.i
-.PHONY : mytoy.i
-
-# target to preprocess a source file
-mytoy.cpp.i:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/mytoy.cpp.i
-.PHONY : mytoy.cpp.i
-
-mytoy.s: mytoy.cpp.s
-.PHONY : mytoy.s
-
-# target to generate assembly for a file
-mytoy.cpp.s:
-	$(MAKE) -f CMakeFiles/mytoy.dir/build.make CMakeFiles/mytoy.dir/mytoy.cpp.s
-.PHONY : mytoy.cpp.s
 
 # Help Target
 help:
@@ -427,8 +355,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... mytoy"
+	@echo "... eg_toy"
 	@echo "... rebuild_cache"
+	@echo "... eg_toy.o"
+	@echo "... eg_toy.i"
+	@echo "... eg_toy.s"
+	@echo "... egio.o"
+	@echo "... egio.i"
+	@echo "... egio.s"
 	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_reader.o"
 	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_reader.i"
 	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_reader.s"
@@ -438,21 +372,6 @@ help:
 	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_writer.o"
 	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_writer.i"
 	@echo "... home/nary/egserv/src/mysub/jsoncpp/json_writer.s"
-	@echo "... home/nary/egserv/src/mysub/net/HttpClient.o"
-	@echo "... home/nary/egserv/src/mysub/net/HttpClient.i"
-	@echo "... home/nary/egserv/src/mysub/net/HttpClient.s"
-	@echo "... home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.o"
-	@echo "... home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.i"
-	@echo "... home/nary/egserv/src/mysub/net/c_netlib/BaseSocket.s"
-	@echo "... home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.o"
-	@echo "... home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.i"
-	@echo "... home/nary/egserv/src/mysub/net/c_netlib/EventDispatch.s"
-	@echo "... home/nary/egserv/src/mysub/net/c_netlib/RefObject.o"
-	@echo "... home/nary/egserv/src/mysub/net/c_netlib/RefObject.i"
-	@echo "... home/nary/egserv/src/mysub/net/c_netlib/RefObject.s"
-	@echo "... home/nary/egserv/src/mysub/net/c_netlib/netlib.o"
-	@echo "... home/nary/egserv/src/mysub/net/c_netlib/netlib.i"
-	@echo "... home/nary/egserv/src/mysub/net/c_netlib/netlib.s"
 	@echo "... home/nary/egserv/src/mysub/util/Lock.o"
 	@echo "... home/nary/egserv/src/mysub/util/Lock.i"
 	@echo "... home/nary/egserv/src/mysub/util/Lock.s"
@@ -462,12 +381,12 @@ help:
 	@echo "... home/nary/egserv/src/mysub/util/ThreadPool.o"
 	@echo "... home/nary/egserv/src/mysub/util/ThreadPool.i"
 	@echo "... home/nary/egserv/src/mysub/util/ThreadPool.s"
+	@echo "... home/nary/egserv/src/mysub/util/test.o"
+	@echo "... home/nary/egserv/src/mysub/util/test.i"
+	@echo "... home/nary/egserv/src/mysub/util/test.s"
 	@echo "... home/nary/egserv/src/mysub/util/util.o"
 	@echo "... home/nary/egserv/src/mysub/util/util.i"
 	@echo "... home/nary/egserv/src/mysub/util/util.s"
-	@echo "... mytoy.o"
-	@echo "... mytoy.i"
-	@echo "... mytoy.s"
 .PHONY : help
 
 
